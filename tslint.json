@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "tslint:recommended"
+  ],
+  "rules": {
+    "no-unused-expression": false,
+    "triple-equals": false,
+    "indent": [true, "tabs"],
+    "import-spacing": false,
+    "no-console": false,
+    "unified-signatures": false,
+    "arrow-parens": false,
+    "no-namespace": [true, "allow-declarations"],
+    "interface-name": [false],
+    "object-literal-sort-keys": [
+      true,
+      "ignore-case",
+      "match-declaration-order",
+      "shorthand-first"
+    ],
+    "one-line": [
+      false,
+      "check-catch",
+      "check-finally",
+      "check-else"
+    ]
+  }
+}
