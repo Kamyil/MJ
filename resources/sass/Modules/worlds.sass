@@ -1,0 +1,44 @@
+.worlds-container
+
+  .world
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+    min-height: 300px
+    margin: 20px 20px
+    font-size: 24px
+    cursor: pointer
+    +onSmall
+      margin: 50px 50px
+    &:hover
+      @if $tile-scale-effects == true
+        transform: scale(1.02)
+        box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.42)
+        transition-duration: 0.25s
+    &:active
+      @if $tile-scale-effects == true
+        transform: scale(0.98)
+        transition-duration: 0.25s
+    &-caption
+      color: white
+      margin: 20px 0
+      position: relative
+      bottom: 40px
+      @if $uppercase-requirement == true
+        text-transform: uppercase
+    &-img
+      width: 50px
+      height: 50px
+      border-radius: 50%
+      background-color: #fff
+
+  #components-and-led-lighting
+    +worldGradient(#4ba241,#a7c73e)
+  #devices-and-it-systems
+    +worldGradient(#3b594d,#009999)
+  #electronic-elements
+    +worldGradient(#273583,#009fe3)
+  #world-4
+    +worldGradient(#c4352a,#cd1719)
