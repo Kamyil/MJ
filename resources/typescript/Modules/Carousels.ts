@@ -1,24 +1,18 @@
 import "slick-carousel";
-import * as $ from "jquery";
 
 const Carousels = (() => {
 
 // language=JQuery-CSS
 
-        $("#gallery-main").slick({
-            dots: true,
-            infinite: true,
-            slidesToScroll: 1,
-            slidesToShow: 1
-        });
-        console.log('dupa');
+        // $("#gallery-main").slick({
+        //     dots: true,
+        //     infinite: true,
+        //     slidesToScroll: 1,
+        //     slidesToShow: 1
+        // });
 
 })();
 
-
-
 export {Carousels};
-
-
 
 // $body.on("click", Selector.TempBasketModal.Submit, submitCartForm);

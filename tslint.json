@@ -5,7 +5,6 @@
   "rules": {
     "no-unused-expression": false,
     "triple-equals": false,
-    "indent": [true, "tabs"],
     "import-spacing": false,
     "no-console": false,
     "unified-signatures": false,
