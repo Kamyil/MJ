@@ -4,7 +4,7 @@ import {Worlds}        from "./Modules/Worlds";
 import {Nav}        from "./UI/Nav";
 
 // @ts-ignore
-window.$ = $;
+// window.$ = $;
 
 export {
     Carousels,

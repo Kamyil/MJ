@@ -16,6 +16,7 @@
     "test": "karma start --single-run"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.4.0",
     "@types/bootstrap": "^4.1.2",
     "@types/jasmine": "^2.8.8",
     "@types/jasmine-jquery": "^1.5.32",
@@ -94,6 +95,7 @@
     "@chenfengyuan/datepicker": "^1.0.0",
     "blueimp-file-upload": "^9.22.0",
     "bootstrap": "^4.1.2",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "jquery-ui": "^1.12.1",
     "jquery-validation": "^1.17.0",

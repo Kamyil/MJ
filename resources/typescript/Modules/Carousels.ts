@@ -1,15 +1,16 @@
+import * as $ from "jquery";
 import "slick-carousel";
 
 const Carousels = (() => {
 
 // language=JQuery-CSS
 
-        // $("#gallery-main").slick({
-        //     dots: true,
-        //     infinite: true,
-        //     slidesToScroll: 1,
-        //     slidesToShow: 1
-        // });
+        $("#gallery-main").slick({
+            dots: true,
+            infinite: true,
+            slidesToScroll: 1,
+            slidesToShow: 1,
+        });
 
 })();
 

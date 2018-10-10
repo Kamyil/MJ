@@ -27,10 +27,12 @@ const Worlds = (() => {
         for (let i = 1; i <= Order.length; i++) {
 
             const WORLD_TEMPLATE = $(`
-                <div class="col-lg-5 col-md-5 world${Order[i]}">
-                    <span class="world-caption"></span>
-                    <div class="world-img"></div>
-                </div>
+                <a href="world.html">
+                    <div class="col-lg-5 col-md-5 world world${Order[i - 1]}">
+                        <span class="world-caption"></span>
+                        <div class="world-img"></div>
+                    </div>
+                </a>
             `);
 
             WORLD_TEMPLATE.on("click", () => {
