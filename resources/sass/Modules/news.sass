@@ -1,4 +1,5 @@
 .news-container
+  background-color: #fff
   h2
     color: white
     display: block
@@ -26,16 +27,23 @@
       font-size: 14px
       font-weight: 300
     .news-read-more-btn
-      background-color: $primary-color
       border: none
-      color: white
-      min-width: 200px
+      color: $primary-color
+      font-style: italic
       padding: 5px 0
-      @if $uppercase-requirement == true
-        text-transform: uppercase
+      text-transform: lowercase
       font-weight: 300
       display: block
       margin: 0 auto
       cursor: pointer
+      border-bottom: 1px solid transparent
       &:hover
-        +fluidHoverField($secondary-color,0.2)
+        color: $secondary-color
+        border-bottom: 1px solid $primary-color
+        transition-duration: 0.25s
+
+.world-news
+  .news-container
+    display: flex
+    flex-direction: row
+    margin: 10px

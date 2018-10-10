@@ -1,0 +1,18 @@
+.promoted-products
+    display: flex
+    flex-direction: row
+    .product
+        display: flex
+        flex-direction: column
+        margin: 20px
+        +flexCenter
+        &-image
+            max-width: 200px
+        &-title
+            font-weight: 700
+            color: #000
+            @if $uppercase-requirement
+                text-transform: uppercase
+        &-desc
+            font-weight: 300
+            color: #505050

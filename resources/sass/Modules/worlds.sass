@@ -1,5 +1,5 @@
 .worlds-container
-
+  background-color: #fff
   .world
     display: flex
     flex-direction: column
@@ -26,7 +26,7 @@
       margin: 20px 0
       position: relative
       bottom: 40px
-      @if $uppercase-requirement == true
+      @if $uppercase-requirement
         text-transform: uppercase
     &-img
       width: 50px
@@ -42,3 +42,42 @@
     +worldGradient(#273583,#009fe3)
   .world4
     +worldGradient(#c4352a,#cd1719)
+
+// WORLD PAGE
+
+.world
+  &-section-title
+    color: $primary-color
+    text-align: center
+    font-weight: 300
+    @if $uppercase-requirement
+      text-transform: uppercase
+.subcategory-tiles
+  display: flex
+  flex-wrap: wrap
+  +flexCenter
+  .random-box
+    +box(50px)
+    background-color: transparent
+    border: 3px solid black
+    margin: 40px 0
+  .subcategory-tile
+    display: flex
+    cursor: pointer
+    +box(250px)
+    +flexCenter
+    flex-direction: column
+    background-color: #E6E7E9
+    text-align: center
+    margin: 10px
+    &:hover
+      @if $tile-scale-effects
+        transform: scale(1.02)
+        box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.12)
+        transition-duration: 0.25s
+    &:active
+      @if $tile-scale-effects == true
+        transform: scale(0.98)
+        border: 1px solid #E6E7E9
+        transition-duration: 0.25s
+

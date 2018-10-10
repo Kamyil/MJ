@@ -5,12 +5,18 @@ const Carousels = (() => {
 
 // language=JQuery-CSS
 
-        $("#gallery-main").slick({
+        $(".baner-primary").slick({
             dots: true,
             infinite: true,
             slidesToScroll: 1,
             slidesToShow: 1,
         });
+        $(".baner-secondary").slick({
+                dots: true,
+                infinite: true,
+                slidesToScroll: 1,
+                slidesToShow: 1,
+            });
 
 })();
 

@@ -11,11 +11,32 @@
 @import "Modules/index"
 @import "External/index"
 
-// HOMEPAGE STYLES GOES HERE
+// GLOBAL STYLES GOES HERE
 body
   @if $anti-alias
     -webkit-font-smoothing: antialiased
     font-smoothing: antialiased
+
+.expand-btn
+  color: $primary-color
+  text-transform: lowercase
+  font-style: italic
+  border: none
+  background-color: transparent
+  text-align: center
+  display: block
+  margin: 20px auto
+
+.section-block-title
+  width: 100vw
+  margin: 40px 0
+  background-color: $primary-color
+  text-align: center
+  color: #fff
+  font-weight: 500
+  padding: 10px
+  @if $uppercase-requirement
+    text-transform: uppercase
 
 
 
