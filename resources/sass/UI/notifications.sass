@@ -1,0 +1,116 @@
+@import "../variables"
+#bigNotyfications
+  .notyfication-big
+    width: 100vw
+    min-height: 50px
+    padding: 0 50px
+    box-sizing: border-box
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    .close
+      position: absolute
+      top: 0
+      left: 0
+      cursor: pointer
+    &.error
+      background-color: red
+      color: white
+      .close
+        background-color: darken(red, 5%)
+    &.info
+      background-color: $danger
+      color: white
+      .close
+        background-color: darken($danger, 5%)
+    &.success
+      background-color: $success
+      .close
+        background-color: darken($success, 5%)
+    &.warning
+      background-color: $warning
+      .close
+        background-color: darken($warning, 5%)
+
+#miniNotiRemoveAll
+  border: 1px solid $primary-color
+  background-color: $primary-color
+  color: white
+  //position: absolute
+  text-align: center
+  //border-radius: 5px
+  height: 30px
+  line-height: 25px
+  vertical-align: middle
+  margin-bottom: 5px
+#miniNoti
+  pointer-events: none
+  @media (max-width: 768px)
+    width: 100%
+    min-width: 0
+    left: 0
+    top: 60px
+    padding: 10px
+
+
+  z-index: 9999
+  position: fixed
+  top: 10px
+  left: 10px
+  min-width: 320px
+  max-width: 480px
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  .noti
+    padding: 0 30px 0 10px
+    display: inline-block
+    height: auto
+    white-space: pre-wrap
+    min-height: 30px
+    line-height: 30px
+    vertical-align: middle
+    margin: 0 0 5px 0
+    background-color: dimgray
+    &-error
+      background-color: $danger
+      &-close
+        background-color: darken($danger, 5%)
+    &-info
+      background-color: $primary-color
+      color: white
+      .deposit-alert
+        background-color: #202020 !important
+      .fa
+        color: white
+      &-close
+        background-color: darken($primary-color, 5%)
+    &-success
+      background-color: $success
+      &-close
+        background-color: darken($success, 5%)
+    &-warning
+      background-color: $warning
+      &-close
+        background-color: darken($warning, 5%)
+    color: white
+    box-shadow: 1px 1px 2px 1px rgba(0,0,0,.2)
+    position: relative
+    border-top-right-radius: 15px
+    border-bottom-right-radius: 15px
+    &-close
+      pointer-events: all
+      display: inline-block
+      border-radius: 15px
+      line-height: 28px
+      text-align: center
+      vertical-align: middle
+      font-size: 26px
+      cursor: pointer
+      color: white
+      top: 0
+      right: 0
+      width: 30px
+      height: 30px
+      position: absolute

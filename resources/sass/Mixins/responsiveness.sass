@@ -5,6 +5,9 @@
   @media (max-width: map-get($bps,md))
     @content
 
+=fromSmall
+  @media (min-width: map-get($bps,md))
+    @content
 =onLarge
   @media (min-width: map-get($bps,lg))
     @content
