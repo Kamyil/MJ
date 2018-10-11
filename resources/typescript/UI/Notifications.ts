@@ -55,8 +55,8 @@ const miniNotyfications = {
 			`<span class='noti noti-${type} ${extraClass}'>${msg}<i class='fa fa-times noti-close'></i></span>`,
 		);
 		notifications
-			.css({opacity: 0, marginLeft: -50})
-			.animate({opacity: 1, marginLeft: 0}, 200)
+			.css({opacity: 0, marginRight: -70})
+			.animate({opacity: 1, marginRight: 10}, 200)
 			.find(".noti-close")
 			.on("click", () => this.remove(notifications));
 

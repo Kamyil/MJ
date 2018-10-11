@@ -1,4 +1,5 @@
 @import "../variables"
+@import "../config"
 #bigNotyfications
   .notyfication-big
     width: 100vw
@@ -46,6 +47,10 @@
   margin-bottom: 5px
 #miniNoti
   pointer-events: none
+  text-align: center
+  font-weight: 500
+  @if $uppercase-requirement
+    text-transform: uppercase
   @media (max-width: 768px)
     width: 100%
     min-width: 0
@@ -53,11 +58,10 @@
     top: 60px
     padding: 10px
 
-
   z-index: 9999
   position: fixed
-  top: 10px
-  left: 10px
+  bottom: 10px
+  right: 10px
   min-width: 320px
   max-width: 480px
   display: flex
@@ -97,8 +101,6 @@
     color: white
     box-shadow: 1px 1px 2px 1px rgba(0,0,0,.2)
     position: relative
-    border-top-right-radius: 15px
-    border-bottom-right-radius: 15px
     &-close
       pointer-events: all
       display: inline-block

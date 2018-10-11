@@ -21,13 +21,19 @@
 
 .products
     display: flex
-    flex-wrap: wrap
     +flexCenter
+    flex-flow: row wrap
     .product
         display: flex
         flex-direction: column
         margin: 10px
+        flex: 0 1 calc(20% - 8px)
+        border: 1px solid transparent
         +flexCenter
+        &:hover
+            border: 1px solid rgba(60,60,60,0.2)
+            cursor: pointer
+            transition-duration: 0.35s
         img
             max-width: 300px
         &-title
@@ -43,20 +49,3 @@
             color: $primary-color
             font-weight: 700
             font-size: 18px
-        .add-product-to-cart-btn
-            border: 1px solid $primary-color
-            @if $uppercase-requirement
-                text-transform: uppercase
-            background-color: transparent
-            color: $primary-color
-            +box(150px,30px)
-            margin: 10px
-            cursor: pointer
-            &:hover
-                background-color: $primary-color
-                box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.22)
-                color: white
-                transition-duration: 0.25s
-            &:active
-                transform: scale(0.9)
-                transition-duration: 0.25s
