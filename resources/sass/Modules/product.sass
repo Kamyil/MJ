@@ -1,15 +1,87 @@
-.product-page
-    margin: 50px 0
-    display: flex
-    justify-content: space-between
-    img
-        flex: 1
-        text-align: center
+//.product-page
+//    margin: 50px 0
+//    display: flex
+//    justify-content: space-between
+//    &-img
+//        display: flex
+//        +flexCenter
+//        img
+//            max-width: 1200px
+
 #product-page-sidebar
+    display: flex
+    //flex-direction: column
+    +flexCenter
+    +box(50vw,250px)
+    padding: 50px
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.22)
+    position: relative
+    bottom: 40px
+    background-color: #fff
+    .product-page-codes
+        display: flex
+        flex-direction: column
+        #available
+            color: #3d8b40
+    .product-page
+        &-code
+            +font(null, 16px, #909090, 300, null)
+        &-title
+            +font(null, 40px, black, 500, null)
+        &-short-desc
+            +font(null, 20px, #909090, 300, null)
+        &-price
+            +font(null, 46px, $primary-color, 500, null)
+    img
+        //box-shadow: 17px 0px 36px 0px rgba(0,0,0,0.18)
+        margin-right: auto
+        max-width: 44%
+
+
+.product-page
     display: flex
     flex-direction: column
     +flexCenter
-    +box(400px)
-    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.22)
-    margin-left: auto
+    &-product-info
+        display: flex
+        flex-direction: column
+        +flexCenter
+        margin-right: 40px
+
+
+
+.product-page-image-gallery
+    width: 100vw
+    display: inline-block
+    margin: 0 auto
+    box-shadow: inset 0px 0px 36px 0px rgba(0,0,0,0.98)
+
+.product-page-info-container
+    width: 100vw
+    display: flex
+    flex-direction: column
+    +flexCenter
+    margin: 20px
+    .product-page
+        &-long-desc
+            text-align: center
+        &-files-to-download
+
+.slick-slide
+    margin: 0 5px
+.product-page-info-switcher
+    display: flex
+    .product-page-info-tab
+        border: none
+        background-color: transparent
+        color: black
+        font-size: 36px
+        margin: 20px 30px
+        cursor: pointer
+        &:hover
+            color: $secondary-color
+            transition-duration: 0.25s
+        &.active
+            color: $primary-color
+            border-bottom: 3px solid $primary-color
 

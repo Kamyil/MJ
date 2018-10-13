@@ -1,0 +1,14 @@
+.crumbs
+  display: flex
+  background-color: transparent
+  .crumb
+    text-decoration: none
+    +font(null, 16px, #909090, 300, null)
+    &::after
+      content: '>'
+      padding: 0 10px
+    &:last-child
+      &::after
+        content: ''
+    &.active
+      +font(null, 16px, $primary-color, 500, null)

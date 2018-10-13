@@ -2,62 +2,68 @@
 @import "config"
 
 // External imports
-@import "~bootstrap/scss/bootstrap"
+@import "~materialize-css/sass/materialize"
 @import "~slick-carousel/slick/slick"
 @import "~slick-carousel/slick/slick-theme"
 @import "~font-awesome/scss/font-awesome"
 
+
 @import "Mixins/index"
 @import "Modules/index"
-@import "External/index"
 @import "UI/index"
 
 // GLOBAL STYLES GOES HERE
-body
-  @if $anti-alias
-    -webkit-font-smoothing: antialiased
-    font-smoothing: antialiased
+*
+	@if $anti-alias
+		-webkit-font-smoothing: antialiased
+	@if $custom-outline
+		&:focus
+			outline-color: $primary-color !important
+
 
 .expand-btn
-  color: $primary-color
-  text-transform: lowercase
-  font-style: italic
-  border: none
-  background-color: transparent
-  text-align: center
-  display: block
-  margin: 20px auto
+	color: $primary-color
+	text-transform: lowercase
+	font-style: italic
+	border: none
+	background-color: transparent
+	text-align: center
+	display: block
+	margin: 20px auto
 
 .section-block-title
-  width: 100vw
-  margin: 40px 0
-  background-color: $primary-color
-  text-align: center
-  color: #fff
-  font-weight: 500
-  padding: 10px
-  @if $uppercase-requirement
-    text-transform: uppercase
+	width: 100vw
+	margin: 40px 0
+	background-color: $primary-color
+	text-align: center
+	color: #fff
+	font-weight: 500
+	padding: 10px
+	@if $uppercase-requirement
+		text-transform: uppercase
 
 .add-product-to-cart-btn
-            border: 1px solid $primary-color
-            @if $uppercase-requirement
-                text-transform: uppercase
-            background-color: transparent
-            color: $primary-color
-            +box(150px,30px)
-            margin: 10px
-            cursor: pointer
-            &:hover
-                background-color: $primary-color
-                box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.22)
-                color: white
-                transition-duration: 0.25s
-            &:active
-                transform: scale(0.9)
-                transition-duration: 0.25s
+	border: 1px solid $primary-color
+	@if $uppercase-requirement
+		text-transform: uppercase
+	background-color: transparent
+	color: $primary-color
+	+box(150px, 30px)
+	margin: 10px
+	cursor: pointer
+	&:hover
+		background-color: $primary-color
+		box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.22)
+		color: white
+		transition-duration: 0.25s
+	&:active
+		transform: scale(0.95)
+		transition-duration: 0.25s
 
 
+.carousel
+	.carousel-item
+		width: 100%
 
 
 
