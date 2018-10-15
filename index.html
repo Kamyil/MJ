@@ -6,141 +6,221 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JM</title>
     <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 </head>
 <body>
 
-    <header>
-        <a href="" class="brand">
-          <img src="public/assets/logo.gif" alt="">
+<header>
+    <a href="" class="brand">
+        <img src="public/assets/logo.gif" alt="">
+    </a>
+    <div id="main-search-container">
+        <input type="text" id="main-search" placeholder="Wyszukiwarka">
+        <button id="main-search-btn">Szukaj</button>
+    </div>
+    <button id="login-btn">
+        <i class="fa fa-user-circle" aria-hidden="true"></i>
+        <span>Zaloguj się</span>
+    </button>
+    <div class="divider"></div>
+    <button id="cart-btn">
+        <span>Koszyk</span>
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-total">249,99 PLN</span>
+    </button>
+</header>
+
+<nav>
+
+    <a href="#">O firmie</a>
+
+    <a href="#">Zasady</a>
+
+    <a href="#">Kariera</a>
+
+    <a href="#">Kontakt</a>
+
+    <select>
+        <option value="" selected>Choose language</option>
+        <option value="">Polski</option>
+        <option value="">English</option>
+        <option value="">Deutsch</option>
+    </select>
+
+    <div id="ham">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</nav>
+
+<aside id="login-panel">
+    <span>Zaloguj się</span>
+    <form action="">
+        <div class="input-field col s12">
+            <input id="login-panel--email" type="text" class="validate">
+            <label for="login-panel--email">E-mail</label>
+        </div>
+        <div class="input-field col s12">
+            <input id="login-panel--password" type="text" class="validate">
+            <label for="login-panel--password">Hasło</label>
+        </div>
+        <div class="row">
+            <a href="register.html">
+                <button class="text-btn-primary">Zarejestruj się</button>
+            </a>
+            <button class="text-btn-primary">Zapomniałeś hasła</button>
+        </div>
+        <div class="row">
+            <button type="submit" class="waves-effect waves-light btn">Zaloguj się</button>
+        </div>
+    </form>
+</aside>
+<aside id="cart-panel">
+    <div class="cart-panel-container">
+    <span>Koszyk</span>
+    <div class="cart-panel-products">
+        <a href="product.html" class="cart-panel-product">
+            <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+            <span class="product-title">WIJAR</span>
+            <span class="product-price">69,99zł</span>
         </a>
-        <div id="main-search-container">
-          <input type="text" id="main-search" placeholder="Wyszukiwarka">
-          <button id="main-search-btn">Szukaj</button>
-        </div>
-        <button id="login-btn">
-          <span class="login-user">
-            <i class="fa fa-user"></i>
-          </span>
-          <span>Zaloguj się</span>
-        </button>
-        <div class="divider"></div>
-        <button id="cart-btn">
-          <span>Koszyk</span>
-          <div class="cart-img"></div>
-          <span id="cart-total">249,99 PLN</span>
-        </button>
-    </header>
+        <a href="product.html" class="cart-panel-product">
+            <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+            <span class="product-title">WIJAR</span>
+            <span class="product-price">69,99zł</span>
+        </a>
+        <a href="product.html" class="cart-panel-product">
+            <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+            <span class="product-title">WIJAR</span>
+            <span class="product-price">69,99zł</span>
+        </a>
+        <a href="product.html" class="cart-panel-product">
+            <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+            <span class="product-title">WIJAR</span>
+            <span class="product-price">69,99zł</span>
+        </a>
+        <a href="product.html" class="cart-panel-product">
+            <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+            <span class="product-title">WIJAR</span>
+            <span class="product-price">69,99zł</span>
+        </a>
+        <a href="product.html" class="cart-panel-product">
+            <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+            <span class="product-title">WIJAR</span>
+            <span class="product-price">69,99zł</span>
+        </a>
+        <a href="product.html" class="cart-panel-product">
+            <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+            <span class="product-title">WIJAR</span>
+            <span class="product-price">69,99zł</span>
+        </a>
+    </div>
+    <div id="cart-panel-total">
+        <span>Łącznie</span>
+        <span>9999,99zł</span>
+        <button class="waves-effect waves-light btn">Realizuj zamówienie</button>
+    </div>
+    </div>
+</aside>
+<div class="gallery baner-primary">
+    <img src="public/assets/baner.jpg" alt="">
+    <img src="public/assets/baner.jpg" alt="">
+    <img src="public/assets/baner.jpg" alt="">
+    <img src="public/assets/baner.jpg" alt="">
+</div>
 
-      <nav>
-
-          <a href="#">O firmie</a>
-
-            <a href="#">Zasady</a>
-
-            <a href="#">Kariera</a>
-
-            <a href="#">Kontakt</a>
-
-        <select>
-          <option value="" selected>Choose language</option>
-              <option value="">Polski</option>
-              <option value="">English</option>
-              <option value="">Deutsch</option>
-        </select>
-
-        <div id="ham">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-      </nav>
-
-        <div class="gallery baner-primary">
-          <img src="public/assets/baner.jpg" alt="">
-          <img src="public/assets/baner.jpg" alt="">
-          <img src="public/assets/baner.jpg" alt="">
-          <img src="public/assets/baner.jpg" alt="">
-        </div>
-
-      <div class="row">
-        <div class="col-lg-6 col-md-6 worlds-container">
+<div class="row">
+    <div class="col l6 m6 worlds-container">
         <div class="row">
 
 
-          </div>
-
         </div>
 
-        <div class="col-lg-6 col-md-6 news-container">
-          <h2>Aktualności</h2>
-          <div class="news">
+    </div>
+
+    <div class="col l6 m6 news-container">
+        <h2>Aktualności</h2>
+        <div class="news">
             <h3>News 1</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque ex ducimus corrupti maiores? A minima sequi suscipit exercitationem neque aspernatur, hic recusandae soluta expedita mollitia adipisci nisi vero commodi voluptate.Fugit, veniam! Sunt a maiores recusandae fugiat exercitationem quaerat accusamus, sequi eum dolore iusto eveniet, ratione voluptatum aspernatur? Esse fuga ut eum unde suscipit eveniet voluptatibus, voluptates praesentium laudantium doloremque.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque ex ducimus corrupti maiores? A
+                minima sequi suscipit exercitationem neque aspernatur, hic recusandae soluta expedita mollitia adipisci
+                nisi vero commodi voluptate.Fugit, veniam! Sunt a maiores recusandae fugiat exercitationem quaerat
+                accusamus, sequi eum dolore iusto eveniet, ratione voluptatum aspernatur? Esse fuga ut eum unde suscipit
+                eveniet voluptatibus, voluptates praesentium laudantium doloremque.</p>
             <button class="news-read-more-btn">Czytaj więcej</button>
-          </div>
-          <div class="news">
-            <h3>News 1</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque ex ducimus corrupti maiores? A minima sequi suscipit exercitationem neque aspernatur, hic recusandae soluta expedita mollitia adipisci nisi vero commodi voluptate.Fugit, veniam! Sunt a maiores recusandae fugiat exercitationem quaerat accusamus, sequi eum dolore iusto eveniet, ratione voluptatum aspernatur? Esse fuga ut eum unde suscipit eveniet voluptatibus, voluptates praesentium laudantium doloremque.</p>
-                  <button class="news-read-more-btn">Czytaj więcej</button>
-          </div>
-          <div class="news">
-            <h3>News 1</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque ex ducimus corrupti maiores? A minima sequi suscipit exercitationem neque aspernatur, hic recusandae soluta expedita mollitia adipisci nisi vero commodi voluptate.Fugit, veniam! Sunt a maiores recusandae fugiat exercitationem quaerat accusamus, sequi eum dolore iusto eveniet, ratione voluptatum aspernatur? Esse fuga ut eum unde suscipit eveniet voluptatibus, voluptates praesentium laudantium doloremque.</p>
-                  <button class="news-read-more-btn">Czytaj więcej</button>
-          </div>
         </div>
-      </div>
-      <div class="gallery baner-secondary">
-          <img src="public/assets/baner.jpg" alt="">
-          <img src="public/assets/baner.jpg" alt="">
-          <img src="public/assets/baner.jpg" alt="">
-          <img src="public/assets/baner.jpg" alt="">
+        <div class="news">
+            <h3>News 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque ex ducimus corrupti maiores? A
+                minima sequi suscipit exercitationem neque aspernatur, hic recusandae soluta expedita mollitia adipisci
+                nisi vero commodi voluptate.Fugit, veniam! Sunt a maiores recusandae fugiat exercitationem quaerat
+                accusamus, sequi eum dolore iusto eveniet, ratione voluptatum aspernatur? Esse fuga ut eum unde suscipit
+                eveniet voluptatibus, voluptates praesentium laudantium doloremque.</p>
+            <button class="news-read-more-btn">Czytaj więcej</button>
         </div>
+        <div class="news">
+            <h3>News 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque ex ducimus corrupti maiores? A
+                minima sequi suscipit exercitationem neque aspernatur, hic recusandae soluta expedita mollitia adipisci
+                nisi vero commodi voluptate.Fugit, veniam! Sunt a maiores recusandae fugiat exercitationem quaerat
+                accusamus, sequi eum dolore iusto eveniet, ratione voluptatum aspernatur? Esse fuga ut eum unde suscipit
+                eveniet voluptatibus, voluptates praesentium laudantium doloremque.</p>
+            <button class="news-read-more-btn">Czytaj więcej</button>
+        </div>
+    </div>
+</div>
+<div class="gallery baner-secondary">
+    <img src="public/assets/baner2.jpg" alt="">
+    <img src="public/assets/baner2.jpg" alt="">
+    <img src="public/assets/baner2.jpg" alt="">
+    <img src="public/assets/baner2.jpg" alt="">
+</div>
 
-      <footer>
-        <div class="row">
-          <div class="offset-lg-1 col-lg-2 col-md-3 footer-column">
+<footer>
+    <div class="row">
+        <div class="offset l1 offset-md-1 "></div>
+        <div class="col l2 m2 s6 offset-l1 offset-m1 footer-column">
             <h5>O nas</h5>
-            <p>Blabla</p>
-            <p>Blabla</p>
-            <p>Blabla</p>
-           </div>
-          <div class="col-lg-2 col-md-3 footer-column">
-            <h5>Oferta</h5>
-            <p>Blabla</p>
-            <p>Blabla</p>
-            <p>Blabla</p>
-            <p>Blabla</p>
-            <p>Blabla</p>
-            <p>Blabla</p>
-            <p>Blabla</p>
-           </div>
-          <div class="col-lg-2 col-md-3 footer-column">
-            <h5>Doświadczenia</h5>
-            <p>Blabla</p>
-            <p>Blabla</p>
-            <p>Blabla</p>
-            <p>Blabla</p>
-            <p>Blabla</p>
-            <p>Blabla</p>
-            <p>Blabla</p>
-            <p>Blabla</p>
-           </div>
-          <div class="col-lg-2 col-md-3 footer-column">
-            <h5>Jakość</h5>
-            <p>Blabla</p>
-            <p>Blabla</p>
-           </div>
-          <div class="col-lg-2 col-md-3 footer-column">
-            <h5>Kariera</h5>
-            <p>Blabla</p>
-            <p>Blabla</p>
-            <p>Blabla</p>
-           </div>
+            <p>Misja i wizja</p>
+            <p>Historia firmy</p>
+            <p>Warunki współpracy</p>
         </div>
+        <div class="col l2 m2 s6 footer-column">
+            <h5>Oferta</h5>
+            <p>Wdrożenie nowych produktów (NPI)</p>
+            <p>PCV i podzespoły</p>
+            <p>Montaż pakietów elektroniki</p>
+            <p>Montaż finalny</p>
+            <p>Pakowanie i wysyłka</p>
+            <p>Testowanie i kontrola jakości</p>
+            <p>Programy redukcji kosztów</p>
+        </div>
+        <div class="col l2 m2 s6 footer-column">
+            <h5>Doświadczenia</h5>
+            <p>Branża white goods (AGD)</p>
+            <p>Branża smart metering (inteligetne systemy opomiarowania mediów)</p>
+            <p>Branża POS (systemy kasowe)</p>
+            <p>Branża medyczna</p>
+            <p>Branża systemów monitoringu alarmów pożarowych</p>
+            <p>Branża monitoringu pojazdów</p>
+            <p>Branża elektroniki przemysłowej</p>
+        </div>
+        <div class="col l2 m2 s6 footer-column">
+            <h5>Jakość</h5>
+            <p>Polityka jakości</p>
+            <p>Certyfikaty i szkolenia</p>
+        </div>
+        <div class="col l2 m2 s6 footer-column">
+            <h5>Kariera</h5>
+            <p>Dołącz do nas</p>
+            <p>Oferty pracy</p>
+        </div>
+    </div>
 
-      </footer>
+</footer>
 <script src="public/js/bundle.js"></script>
 </body>
 </html>

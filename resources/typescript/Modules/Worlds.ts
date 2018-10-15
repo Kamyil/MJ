@@ -28,7 +28,7 @@ const Worlds = (() => {
 
             const WORLD_TEMPLATE = $(`
                 <a href="world.html">
-                    <div class="col-lg-5 col-md-5 world world${Order[i - 1]}">
+                    <div class="col l5 m5 world world${Order[i - 1]}">
                         <span class="world-caption"></span>
                         <div class="world-img"></div>
                     </div>

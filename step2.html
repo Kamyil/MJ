@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JM</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+<body>
+
+<header>
+    <a href="" class="brand">
+        <img src="public/assets/logo.gif" alt="">
+    </a>
+    <div id="main-search-container">
+        <input type="text" id="main-search" placeholder="Wyszukiwarka">
+        <button id="main-search-btn">Szukaj</button>
+    </div>
+    <button id="login-btn">
+        <i class="fa fa-user-circle" aria-hidden="true"></i>
+        <span>Zaloguj się</span>
+    </button>
+    <div class="divider"></div>
+    <button id="cart-btn">
+        <span>Koszyk</span>
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-total">249,99 PLN</span>
+    </button>
+</header>
+
+<nav>
+
+    <a href="#">O firmie</a>
+
+    <a href="#">Zasady</a>
+
+    <a href="#">Kariera</a>
+
+    <a href="#">Kontakt</a>
+
+    <select>
+        <option value="" selected>Choose language</option>
+        <option value="">Polski</option>
+        <option value="">English</option>
+        <option value="">Deutsch</option>
+    </select>
+
+    <div id="ham">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</nav>
+
+<aside id="login-panel">
+    <span>Zaloguj się</span>
+    <form action="">
+        <div class="input-field col s12">
+            <input id="login-panel--email" type="text" class="validate">
+            <label for="login-panel--email">E-mail</label>
+        </div>
+        <div class="input-field col s12">
+            <input id="login-panel--password" type="text" class="validate">
+            <label for="login-panel--password">Hasło</label>
+        </div>
+        <div class="row">
+            <a href="register.html">
+                <button class="text-btn-primary">Zarejestruj się</button>
+            </a>
+            <button class="text-btn-primary">Zapomniałeś hasła</button>
+        </div>
+        <div class="row">
+            <button type="submit" class="waves-effect waves-light btn">Zaloguj się</button>
+        </div>
+    </form>
+</aside>
+<aside id="cart-panel">
+    <div class="cart-panel-container">
+        <span>Koszyk</span>
+        <div class="cart-panel-products">
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <span class="product-title">WIJAR</span>
+                <span class="product-price">69,99zł</span>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <span class="product-title">WIJAR</span>
+                <span class="product-price">69,99zł</span>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <span class="product-title">WIJAR</span>
+                <span class="product-price">69,99zł</span>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <span class="product-title">WIJAR</span>
+                <span class="product-price">69,99zł</span>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <span class="product-title">WIJAR</span>
+                <span class="product-price">69,99zł</span>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <span class="product-title">WIJAR</span>
+                <span class="product-price">69,99zł</span>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <span class="product-title">WIJAR</span>
+                <span class="product-price">69,99zł</span>
+            </a>
+        </div>
+        <div id="cart-panel-total">
+            <span>Łącznie</span>
+            <span>9999,99zł</span>
+            <button class="waves-effect waves-light btn">Realizuj zamówienie</button>
+        </div>
+    </div>
+</aside>
+
+
+<div id="cart" class="container">
+
+    <div id="cart-content" class="step2 clearfix" data-cart-currency="{$_SESSION['System']['CUR']}"
+         data-cart-currency-calc="{$_SESSION['System']['FCUR']}">
+        <form class="form form-default row" action="/cart/step3" method="POST" id="step2_form">
+            <input type="hidden" value="{$isLoggedIn}" id="step2IsLoggedIn">
+            <div class="col s12 sm6 md6">
+                <div id="base-info">
+
+                    <div class="form-element">
+                        <label>
+                            <input type="checkbox" id="want_new_account" name="cart[want_new_account]"
+                                   {if $_SESSION['cart']['want_new_account']}checked="checked"{/if}/>
+                            <span>Po zakupie stwórz konto z tymi danymi</span>
+                        </label>
+                    </div>
+
+                    <h3 class="header-normal tac">
+                        Dane dostawy
+                    </h3>
+
+
+                    <div class="input-field col s12">
+                        <select id="cart_saved_delivery">
+                            <option value="1" selected>
+                                {$v['pd_name']} {$v['pd_surname']}, ul.{$v['pd_street']} {$v['pd_hnumber']}{if
+                                $v['pd_lnumber']}/{$v['pd_lnumber']}{/if}, {$v['pd_postal']} {$v['pd_city']}
+                            </option>
+                            <option value="2">
+                                {$v['pd_name']} {$v['pd_surname']}, ul.{$v['pd_street']} {$v['pd_hnumber']}{if
+                                $v['pd_lnumber']}/{$v['pd_lnumber']}{/if}, {$v['pd_postal']} {$v['pd_city']}
+                            </option>
+                            <option value="3">
+                                {$v['pd_name']} {$v['pd_surname']}, ul.{$v['pd_street']} {$v['pd_hnumber']}{if
+                                $v['pd_lnumber']}/{$v['pd_lnumber']}{/if}, {$v['pd_postal']} {$v['pd_city']}
+                            </option>
+                            <option value="4">
+                                {$v['pd_name']} {$v['pd_surname']}, ul.{$v['pd_street']} {$v['pd_hnumber']}{if
+                                $v['pd_lnumber']}/{$v['pd_lnumber']}{/if}, {$v['pd_postal']} {$v['pd_city']}
+                            </option>
+                        </select>
+                        <label for="cart_saved_delivery">Wybierz dane dostawy</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <select>
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <label>Materialize Select</label>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="input-field col s12 m6">
+                            <!--{!$fieldData = ['name' => 'Imię', 'key'=>'first_name', 'primaryKey' => 'delivery', 'required' => true]}-->
+                            <!--{insert cart/step2_field.tpl}-->
+                            <label for="first-name">Imię</label>
+                            <input type="text" id="first-name">
+                        </div>
+                        <div class="input-field col s12 m6">
+                            <!--{!$fieldData = ['name' => 'Nazwisko', 'key'=>'last_name', 'primaryKey' => 'delivery', 'required' => true]}-->
+                            <!--{insert cart/step2_field.tpl}-->
+                            <label for="last-name">Nazwisko</label>
+                            <input type="text" id="last-name">
+                        </div>
+                    </div>
+                    <h4 class="step2-form-header">Adres</h4>
+                    <div class="row">
+                        <div class="col s12 m12">
+                            <!--{!$fieldData = ['name' => 'Ulica', 'key'=>'street', 'primaryKey' => 'delivery', 'required' => true]}-->
+                            <!--{insert cart/step2_field.tpl}-->
+                            <label for="street">Ulica</label>
+                            <input type="text" id="street">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 m6">
+                            <!--{!$fieldData = ['name' => 'Numer domu', 'key'=>'hnumber', 'primaryKey' => 'delivery', 'required' => true]}-->
+                            <!--{insert cart/step2_field.tpl}-->
+                            <label for="hnumber">Numer domu</label>
+                            <input type="text" id="hnumber">
+                        </div>
+                        <div class="input-field col s12 m6">
+                            <!--{!$fieldData = ['name' => 'Numer lokalu', 'key'=>'lnumber', 'primaryKey' => 'delivery', 'required' => true]}-->
+                            <!--{insert cart/step2_field.tpl}-->
+                            <label for="lnumber">Numer lokalu</label>
+                            <input type="text" id="lnumber">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 m6">
+                            <!--{!$fieldData = ['name' => 'Kod pocztowy', 'key'=>'postal', 'primaryKey' => 'delivery', 'required' => true]}-->
+                            <!--{insert cart/step2_field.tpl}-->
+                            <label for="postal">Kod pocztowy</label>
+                            <input type="text" id="postal">
+                        </div>
+                        <div class="input-field col s12 m6">
+                            <!--{!$fieldData = ['name' => 'Miasto', 'key'=>'city', 'primaryKey' => 'delivery', 'required' => true]}-->
+                            <!--{insert cart/step2_field.tpl}-->
+                            <label for="city">Miasto</label>
+                            <input type="text" id="city">
+                        </div>
+                    </div>
+                    <h4 class="step2-form-header">Kontakt</h4>
+
+                    <div class="row">
+                        <div class="input-field col s12 m6">
+                            <!--{!$fieldData = ['name' => 'Numer telefonu', 'key'=>'phone', 'primaryKey' => 'delivery', 'required' => true]}-->
+                            <!--{insert cart/step2_field.tpl}-->
+                            <label for="phone">Numer telefonu</label>
+                            <input type="text" id="phone">
+                        </div>
+                        <!--{if $_SESSION['user']['user_email']}-->
+                        <div class="input-field col s12 m6">
+                            <!--{!$fieldData = ['name' => 'E-mail', 'key'=>'email', 'primaryKey' => 'delivery', 'required' => true, 'default' => $_SESSION['user']['user_email'], 'disabled' => true]}-->
+                            <!--{insert cart/step2_field.tpl}-->
+                            <label for="email">E-mail</label>
+                            <input type="text" id="email">
+                        </div>
+                        <!--{else}-->
+                        <!--<div class="input-field col s12 m6">-->
+                        <!--&lt;!&ndash;{!$fieldData = ['name' => 'E-mail', 'key'=>'email', 'primaryKey' => 'delivery', 'required' => true]}&ndash;&gt;-->
+                        <!--&lt;!&ndash;{insert cart/step2_field.tpl}&ndash;&gt;-->
+                        <!--<label for=""></label>-->
+                        <!--<input type="text" id="">-->
+                        <!--</div>-->
+                        <!--{/if}-->
+                    </div>
+
+                    <div class="input-field col s12 m12">
+                        <label for="cart[remarks]">Uwagi</label>
+                        <textarea class="materialize-textarea" id="cart[remarks]" name="cart[remarks]">
+                            </textarea>
+                    </div>
+                </div>
+
+
+                <div class="form-element">
+                    <label>
+                        <input type="checkbox" id="want_invoice" class="data-edit-toggle" name="cart[want_invoice]"
+                               {if isset($_SESSION['cart']['want_invoice']) &&
+                        $_SESSION['cart']['want_invoice']}checked="checked"{/if}/>
+                        <span>Chcę fakturę</span>
+                    </label>
+                </div>
+                <div class="invoice-data" {if !$_SESSION[
+                'cart']['want_invoice']}style="display:none"{/if}>
+                <h3 class="header-normal tac">
+                    <span class="header header-md txt-upper">Faktura</span>
+                </h3>
+                <!--{if !$userInvoiceData}-->
+                <!--<button type="button" class="btn btn-abil-primary" id="step2-copy-invoice">Przepisz dane z dostawy</button>-->
+                <!--{/if}-->
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <!--{!$fieldData = ['name' => 'NIP', 'key'=>'nip', 'primaryKey' => 'invoice', 'required' => true, 'default' => $userInvoiceData['pi_company_nip'], 'disabled' => $invoiceDisabled]}-->
+                        <!--{insert cart/step2_field.tpl}-->
+                        <label for=""></label>
+                        <input type="text">
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <!--{!$fieldData = ['name' => 'Nazwa firmy', 'key'=>'company_name', 'primaryKey' => 'invoice', 'required' => true, 'default' => $userInvoiceData['pi_company_name'], 'disabled' => $invoiceDisabled]}-->
+                        <!--{insert cart/step2_field.tpl}-->
+                        <label for=""></label>
+                        <input type="text">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12 m12">
+                        <!--{!$fieldData = ['name' => 'Ulica', 'key'=>'street', 'primaryKey' => 'invoice', 'required' => true, 'default' => $userInvoiceData['pi_street'], 'disabled' => $invoiceDisabled]}-->
+                        <!--{insert cart/step2_field.tpl}-->
+                        <label for=""></label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <!--{!$fieldData = ['name' => 'Numer domu', 'key'=>'hnumber', 'primaryKey' => 'invoice', 'required' => true, 'default' => $userInvoiceData['pi_hnumber'], 'disabled' => $invoiceDisabled]}-->
+                        <!--{insert cart/step2_field.tpl}-->
+                        <label for=""></label>
+                        <input type="text">
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <!--{!$fieldData = ['name' => 'Numer lokalu', 'key'=>'lnumber', 'primaryKey' => 'invoice', 'required' => true, 'default' => $userInvoiceData['pi_lnumber'], 'disabled' => $invoiceDisabled]}-->
+                        <!--{insert cart/step2_field.tpl}-->
+                        <label for=""></label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <!--{!$fieldData = ['name' => 'Kod pocztowy', 'key'=>'postal', 'primaryKey' => 'invoice', 'required' => true, 'default' => $userInvoiceData['pi_postal'], 'disabled' => $invoiceDisabled]}-->
+                        <!--{insert cart/step2_field.tpl}-->
+                        <label for=""></label>
+                        <input type="text">
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <!--{!$fieldData = ['name' => 'Miasto', 'key'=>'city', 'primaryKey' => 'invoice', 'required' => true, 'default' => $userInvoiceData['pi_city'], 'disabled' => $invoiceDisabled]}-->
+                        <!--{insert cart/step2_field.tpl}-->
+                        <label for=""></label>
+                        <input type="text">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <!--{!$fieldData = ['name' => 'Numer telefonu', 'key'=>'phone', 'primaryKey' => 'invoice', 'required' => true, 'default' => $userInvoiceData['pi_phone'], 'disabled' => $invoiceDisabled]}-->
+                        <!--{insert cart/step2_field.tpl}-->
+                        <label for=""></label>
+                        <input type="text">
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <!--{!$fieldData = ['name' => 'E-mail', 'key'=>'email', 'primaryKey' => 'invoice', 'required' => true, 'default' => $userInvoiceData['pi_email'], 'disabled' => $invoiceDisabled]}-->
+                        <!--{insert cart/step2_field.tpl}-->
+                        <label for=""></label>
+                        <input type="text">
+                    </div>
+                </div>
+                {if $invoiceDisabled}<a href="/change-invoice" target="_blank">Dla czego nie mogę edytować tych
+                danych?</a>{/if}
+            </div>
+    </div>
+</div>
+<div class="col s12 sm6 md6">
+
+    <div class="row form-input-radio" id="delivery">
+        <div class="col s12 {if isset($_SESSION['aErr']['cart']['delivery_method']) && $_SESSION['aErr']['cart']['delivery_method']}error{/if}">
+            <h3 class="header header-md txt-upper"
+                style="font-size: 19px !important; text-transform: initial !important;">Wybierz METODĘ DOSTAWY</h3>
+            <b id="deliveryErrors" class="red">
+                {foreach $_SESSION['aErr']['cart']['delivery_method'] as $k=>$v}
+                {$v}<br/>
+                {/foreach}
+            </b>
+        </div>
+        {!$iterator = 0}
+        {foreach $deliveryMethod as $k=>$v}
+        {!$methodActive = ($k == 19 && $blockDelivery == true) || !$v['is_active']}
+
+
+        <div class="col s12 col-md-4 col-lg-3 {$methodActive?" disabled
+        ":''}"
+        id='delivery_method_{$k}'>
+        <label>
+            <input type="radio" name="cart[delivery_method]" value="{$k}" class="delivery_method_radio"
+                   data-error-holder="deliveryErrors"
+                   {if $methodActive} disabled {elseif $_SESSION['cart']['delivery_method'] == $k} checked {elseif
+            $iterator == 0} checked {/if}
+            data-is-cod="{$v['cod_active']}" data-cod-limit="{$v['cod_limit']}" data-is-table="{$v['is_table']}">
+            <span data-background-icon='&#xf00c' style="font-size: 14px;">
+                                    <div class="step2-deliveryMethod-img">
+                                        {if $v['id']==20}
+                                            <img src="/web/img/cart/dostawa.png" alt="">
+                                        {elseif $v['id']==19}
+                                            <img src="/web/img/cart/odbior-osobisty.png" alt="">
+                                        {elseif $v['id']==18}
+                                            <img src="/web/img/cart/list.svg" alt="">
+                                        {/if}
+                                    </div>
+                                    <div class="step2-deliveryMethod-text">
+                                        {$v['name']} <br/>
+                                        <b>{show_price($v['base_price'])}</b>
+                                    </div>
+                                </span>
+        </label>
+    </div>
+    {!$iterator++}
+    {/foreach}
+</div>
+<div class="row form-input-radio" id="payment">
+    <div class="col s12 {if isset($_SESSION['aErr']['cart']['payment_method']) && $_SESSION['aErr']['cart']['payment_method']}error{/if}">
+        <h3 class="header header-md txt-upper"
+            style="font-size: 19px !important; text-transform: initial !important; font-weight: 500 !important;">Wybierz
+            METODĘ PŁATNOŚCI</h3>
+        <b id="paymentsErrors" class="red">
+            {foreach $_SESSION['aErr']['cart']['payment_method'] as $k=>$v}
+            {$v}<br/>
+            {/foreach}
+        </b>
+    </div>
+    {!$iterator = 0}
+    {foreach $paymentMethod as $k=>$v}
+
+    <div class="col s12 col-md-4 col-lg-3" id='payment_method_{$k}'>
+        <label>
+
+            <input type="radio" name="cart[payment_method]" value="{$k}" {if $_SESSION['cart']['payment_method'] == $k}
+            checked {elseif $iterator == 0} checked {/if} data-error-holder="paymentsErrors">
+            <span data-background-icon='&#xf00c' style="font-size: 14px; white-space: pre-line;">
+                                    <div class="step2-paymentMethod-img">
+                                        {if $k==1}
+                                            <img src="/web/img/cart/platnosc-elektroniczna.png" alt="">
+                                        {elseif $k==2}
+                                        <img src="/web/img/cart/przedplata.png" alt="">
+                                        {elseif $k==4 || $k==6}
+                                        <img src="/web/img/cart/za-pobraniem.png"
+                                             alt="Reka z banknotem w ręku. Symbol odbioru osobistego">
+                                        {/if}
+                                    </div>
+                                    <div class="step2-paymentMethod-text">{$v}</div>
+                                </span>
+        </label>
+    </div>
+    {!$iterator++}
+    {/foreach}
+    <br>
+    <div class="col s12 col-alert" style="display: none; text-align: center;font-weight: bold;" id='cart-alert'></div>
+</div>
+
+<div class="col s12 col-products">
+    <b><h2 class="header header-small header-normal txt_upper" style="margin-top: 20px;">Twoje zamówienie</h2></b>
+    <div class='row cart-summary-products'>
+        {!$blockDelivery = false}
+        {foreach $mod_bsk as $k=>$aProd}
+        <div class='col s12 cart-summary-product header-border-b product-hide'>
+            <div class="row">
+                <div class="col-xs">
+                    <div class="row">
+                        <p class="col s12 col-md-7 col-lg-7">
+                            <a href="{$aProd['produkt_link']}">
+                                {*{$aProd['produkt_nazwa_producenta']}{ }*}
+                                {if $aProd['produkt_seria']}
+                                {$aProd['produkt_seria']}&nbsp;
+                                {/if}
+                                {$aProd['produkt_nazwa']}
+                            </a>
+                        </p>
+                        <p class="col-xs-4 col-md-2 col-lg-2" style="color: #0098d8; line-height: 31px;">{$aProd['qty']}
+                            szt.</p>
+                        {* <b class="col-xs-3 tar">{show_price($aProd['cena_x'])}</b> *}
+                        {*
+                        <div class="col-xs-9"></div>
+                        *}
+                        {* <b class="col-xs-3 tar">x{$aProd['qty']}</b> *}
+                        <b class="col-xs-6 col-md-3 col-lg-3 tar step2-product-single-price" style="line-height: 65px;">{show_price($aProd['cena_x']
+                            * $aProd['qty'])}</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {if $aProd['produkt_na_zamowienie'] == 't' || $aProd['produkt_erp_state'] == 't'}{!$blockDelivery = true}{/if}
+        {/foreach}
+        <button class="step2-showmore-items" type="button"> Pokaż więcej</button>
+    </div>
+
+
+</div>
+<div id="col-total-info">
+    <!--TUTAJ BEDZIE PODSUMOWANIE-->
+</div>
+
+<button class="btn btn-abil-primary" name="submit" style="display: block; margin: 0 auto;"
+        value="step2">Do ostatniego kroku >
+</button>
+
+</div>
+</form>
+</div>
+</div>
+
+<div id="background-gray"></div>
+<div class="step2-modal">
+    <h1>
+        Podany adres email<br/>
+        ma już przypisane konto
+    </h1>
+    <p>Podaj hasło aby się zalogować, lub kontynuuj jako gość</p>
+
+    <form id="step2modalForm" method="POST" action="/login">
+        <input type="hidden" name="email" id="step2-modal-email" value="">
+        <div class="form-element">
+            <input class="form-input" id="password" type="password" name="password" placeholder="Podaj hasło"/>
+        </div>
+        <button type="submit" class="btn dont-delete-an-account">Zaloguj</button>
+        <p class="tac">
+            <a id="step2-remind-password">PRZYPOMNIJ HASŁO</a>
+        </p>
+    </form>
+    <p id="continueAsGuest">Kontynuuj jako gość</p>
+</div>
+
+
+<footer>
+    <div class="row">
+        <div class="offset l1 offset-md-1 "></div>
+        <div class="col l2 m2 s6 offset-l1 offset-m1 footer-column">
+            <h5>O nas</h5>
+            <p>Misja i wizja</p>
+            <p>Historia firmy</p>
+            <p>Warunki współpracy</p>
+        </div>
+        <div class="col l2 m2 s6 footer-column">
+            <h5>Oferta</h5>
+            <p>Wdrożenie nowych produktów (NPI)</p>
+            <p>PCV i podzespoły</p>
+            <p>Montaż pakietów elektroniki</p>
+            <p>Montaż finalny</p>
+            <p>Pakowanie i wysyłka</p>
+            <p>Testowanie i kontrola jakości</p>
+            <p>Programy redukcji kosztów</p>
+        </div>
+        <div class="col l2 m2 s6 footer-column">
+            <h5>Doświadczenia</h5>
+            <p>Branża white goods (AGD)</p>
+            <p>Branża smart metering (inteligetne systemy opomiarowania mediów)</p>
+            <p>Branża POS (systemy kasowe)</p>
+            <p>Branża medyczna</p>
+            <p>Branża systemów monitoringu alarmów pożarowych</p>
+            <p>Branża monitoringu pojazdów</p>
+            <p>Branża elektroniki przemysłowej</p>
+        </div>
+        <div class="col l2 m2 s6 footer-column">
+            <h5>Jakość</h5>
+            <p>Polityka jakości</p>
+            <p>Certyfikaty i szkolenia</p>
+        </div>
+        <div class="col l2 m2 s6 footer-column">
+            <h5>Kariera</h5>
+            <p>Dołącz do nas</p>
+            <p>Oferty pracy</p>
+        </div>
+    </div>
+
+</footer>
+<script src="public/js/bundle.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JM</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+<body>
+
+<header>
+    <a href="" class="brand">
+        <img src="public/assets/logo.gif" alt="">
+    </a>
+    <div id="main-search-container">
+        <input type="text" id="main-search" placeholder="Wyszukiwarka">
+        <button id="main-search-btn">Szukaj</button>
+    </div>
+    <button id="login-btn">
+        <i class="fa fa-user-circle" aria-hidden="true"></i>
+        <span>Zaloguj się</span>
+    </button>
+    <div class="divider"></div>
+    <button id="cart-btn">
+        <span>Koszyk</span>
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-total">249,99 PLN</span>
+    </button>
+</header>
+
+<nav>
+
+    <a href="#">O firmie</a>
+
+    <a href="#">Zasady</a>
+
+    <a href="#">Kariera</a>
+
+    <a href="#">Kontakt</a>
+
+    <select>
+        <option value="" selected>Choose language</option>
+        <option value="">Polski</option>
+        <option value="">English</option>
+        <option value="">Deutsch</option>
+    </select>
+
+    <div id="ham">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</nav>
+
+<aside id="login-panel">
+    <span>Zaloguj się</span>
+    <form action="">
+        <div class="input-field col s12">
+            <input id="login-panel--email" type="text" class="validate">
+            <label for="login-panel--email">E-mail</label>
+        </div>
+        <div class="input-field col s12">
+            <input id="login-panel--password" type="text" class="validate">
+            <label for="login-panel--password">Hasło</label>
+        </div>
+        <div class="row">
+            <a href="register.html">
+                <button class="text-btn-primary">Zarejestruj się</button>
+            </a>
+            <button class="text-btn-primary">Zapomniałeś hasła</button>
+        </div>
+        <div class="row">
+            <button type="submit" class="waves-effect waves-light btn">Zaloguj się</button>
+        </div>
+    </form>
+</aside>
+<aside id="cart-panel">
+    <div class="cart-panel-container">
+        <span>Koszyk</span>
+        <div class="cart-panel-products">
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <span class="product-title">WIJAR</span>
+                <span class="product-price">69,99zł</span>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <span class="product-title">WIJAR</span>
+                <span class="product-price">69,99zł</span>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <span class="product-title">WIJAR</span>
+                <span class="product-price">69,99zł</span>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <span class="product-title">WIJAR</span>
+                <span class="product-price">69,99zł</span>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <span class="product-title">WIJAR</span>
+                <span class="product-price">69,99zł</span>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <span class="product-title">WIJAR</span>
+                <span class="product-price">69,99zł</span>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <span class="product-title">WIJAR</span>
+                <span class="product-price">69,99zł</span>
+            </a>
+        </div>
+        <div id="cart-panel-total">
+            <span>Łącznie</span>
+            <span>9999,99zł</span>
+            <button class="waves-effect waves-light btn">Realizuj zamówienie</button>
+        </div>
+    </div>
+</aside>
+
+
+<div id="cart" class="container">
+    <form id="step1_form" action="step2.html" method="POST">
+        <div class="row">
+            <div class="col s12 m9">
+                <table class="responsive striped highlight centered responsive-table">
+                    <thead>
+                    <th>Produkt</th>
+                    <th>Cena</th>
+                    <th>Ilość</th>
+                    <th>Wartość</th>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>WIJAR</td>
+                        <td>69,99zł</td>
+                        <td>
+                            <button class="waves-effect waves-light btn counter">-</button>
+                            <span class="badge">99</span>
+                            <button class="waves-effect waves-light btn counter">+</button>
+                        </td>
+                        <td>69,99zł</td>
+                    </tr>
+                    <tr>
+                        <td>WIJAR</td>
+                        <td>69,99zł</td>
+                        <td>
+                            <button class="waves-effect waves-light btn counter">-</button>
+                            <span class="badge">99</span>
+                            <button class="waves-effect waves-light btn counter">+</button>
+                        </td>
+                        <td>699 830, 01zł</td>
+                    </tr>
+                    <tr>
+                        <td>WIJAR</td>
+                        <td>69,99zł</td>
+                        <td>
+                            <button class="waves-effect waves-light btn counter">-</button>
+                            <span class="badge">99</span>
+                            <button class="waves-effect waves-light btn counter">+</button>
+                        </td>
+                        <td>69,99zł</td>
+                    </tr>
+                    <tr>
+                        <td>WIJAR</td>
+                        <td>69,99zł</td>
+                        <td>
+                            <button class="waves-effect waves-light btn counter">-</button>
+                            <span class="badge">99</span>
+                            <button class="waves-effect waves-light btn counter">+</button>
+                        </td>
+                        <td>69,99zł</td>
+                    </tr>
+                    <tr>
+                        <td>WIJAR</td>
+                        <td>69,99zł</td>
+                        <td>
+                            <button class="waves-effect waves-light btn counter">-</button>
+                            <span class="badge">99</span>
+                            <button class="waves-effect waves-light btn counter">+</button>
+                        </td>
+                        <td>69,99zł</td>
+                    </tr>
+                    <tr>
+                        <td>WIJAR</td>
+                        <td>69,99zł</td>
+                        <td>
+                            <button class="waves-effect waves-light btn counter">-</button>
+                            <span class="badge">99</span>
+                            <button class="waves-effect waves-light btn counter">+</button>
+                        </td>
+                        <td>69,99zł</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div class="row between-xs">
+
+
+                    <button type="button" id="clear_all"
+                            class="btn">
+                        <i class="fa fa-trash clear-all-trash-icon" aria-hidden="true"></i>
+                        Usuń wszystko
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="col s12 m3">
+                <div class="cart-summary">
+                    <h2 class="">Podsumowanie</h2>
+
+                    <div class="price-value">
+                        <label>Wartość koszyka</label>
+                        <span id="cart-total-value">999 999,99zl</span>
+
+                    </div>
+
+
+                    <div class="price-value">
+                        <label>Rabaty</label>
+                        <span>1zl</span>
+
+                    </div>
+
+                    <div class="price-value">
+                        <label>Ilość produktów:</label>
+                        <span id="cart-products-count">6</span>
+                    </div>
+                    <div class="price-value">
+                        <label>Ilość sztuk:</label>
+                        <span id="cart-total-qty">999999999</span>
+                    </div>
+                    <div class="price-value">
+                        <label>Razem:</label>
+                        <span id="cart-total-price">999 998, 99zl<i data-toggle="tooltip">*</i></span>
+
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="promo-code" type="text">
+                            <label for="promo-code">Kod promocyjny</label>
+                        </div>
+                    </div>
+
+                    <div class="row cart-promotions">
+                        <div class="col-xs-12 delivery-free"
+                             id="freeShippingLeft">
+                            <span>Do darmowej dostawy brakuje <b>9999zl</b></span>
+                        </div>
+                        <span>&nbsp;Dostawa za 0 PLN!</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-4 col-xs-offset-3">
+                    <button type="submit" class="btn btn-abil-primary btn-with-right-arrow ">Następny krok
+                    </button>
+                </div>
+            </div>
+
+
+</div>
+<div class="alert alert-danger text-center warningInfoBar col-xs-12">
+    W koszyku znajdują sie produkty, które są dostępne na zamówienie - proszę nie sugerować się czasem
+    reazliacji zamówienia
+
+</div>
+
+
+</form>
+
+
+</div>
+
+
+<footer>
+    <div class="row">
+        <div class="offset l1 offset-md-1 "></div>
+        <div class="col l2 m2 s6 offset-l1 offset-m1 footer-column">
+            <h5>O nas</h5>
+            <p>Misja i wizja</p>
+            <p>Historia firmy</p>
+            <p>Warunki współpracy</p>
+        </div>
+        <div class="col l2 m2 s6 footer-column">
+            <h5>Oferta</h5>
+            <p>Wdrożenie nowych produktów (NPI)</p>
+            <p>PCV i podzespoły</p>
+            <p>Montaż pakietów elektroniki</p>
+            <p>Montaż finalny</p>
+            <p>Pakowanie i wysyłka</p>
+            <p>Testowanie i kontrola jakości</p>
+            <p>Programy redukcji kosztów</p>
+        </div>
+        <div class="col l2 m2 s6 footer-column">
+            <h5>Doświadczenia</h5>
+            <p>Branża white goods (AGD)</p>
+            <p>Branża smart metering (inteligetne systemy opomiarowania mediów)</p>
+            <p>Branża POS (systemy kasowe)</p>
+            <p>Branża medyczna</p>
+            <p>Branża systemów monitoringu alarmów pożarowych</p>
+            <p>Branża monitoringu pojazdów</p>
+            <p>Branża elektroniki przemysłowej</p>
+        </div>
+        <div class="col l2 m2 s6 footer-column">
+            <h5>Jakość</h5>
+            <p>Polityka jakości</p>
+            <p>Certyfikaty i szkolenia</p>
+        </div>
+        <div class="col l2 m2 s6 footer-column">
+            <h5>Kariera</h5>
+            <p>Dołącz do nas</p>
+            <p>Oferty pracy</p>
+        </div>
+    </div>
+
+</footer>
+<script src="public/js/bundle.js"></script>
+</body>
+</html>

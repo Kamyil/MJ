@@ -13,12 +13,12 @@
     +onSmall
       margin: 50px 50px
     &:hover
-      @if $tile-scale-effects == true
+      @if $tile-scale-effects
         transform: scale(1.02)
         box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.42)
         transition-duration: 0.25s
     &:active
-      @if $tile-scale-effects == true
+      @if $tile-scale-effects
         transform: scale(0.98)
         transition-duration: 0.25s
     &-caption
@@ -76,7 +76,7 @@
         box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.12)
         transition-duration: 0.25s
     &:active
-      @if $tile-scale-effects == true
+      @if $tile-scale-effects
         transform: scale(0.98)
         border: 1px solid #E6E7E9
         transition-duration: 0.25s

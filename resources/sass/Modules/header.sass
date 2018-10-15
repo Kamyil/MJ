@@ -1,91 +1,106 @@
+@import "common"
 header
-  display: flex
-  width: 100vw
-  height: 120px
-  justify-content: center
-  align-items: center
-  position: sticky
-  top: 0
-  background-color: #fff
-  transform: translate3d(0, 0, 0) // Weird header jumping fix
-  +z-index(header)
-  +onSmall
-    display: none
-  .brand
-    text-decoration: none
-    margin: 0 50px
-    position: relative
-    bottom: 4px
-  #main-search-container
-    #main-search
-      border: 1px solid lighten($primary-color,10%)
-      @if $uppercase-requirement == true
-        text-transform: uppercase
-      font-weight: 300
-      width: 30vw
-      padding: 10px
-      +onSmall
-        display: none
-      &-btn
-        background-color: $primary-color
-        color: white
-        border: none
-        padding: 11px
-        width: 170px
-        @if $uppercase-requirement == true
-          text-transform: uppercase
-        font-weight: 300
-        margin-left: -5px
-        margin-right: 50px
-        +onSmall
-          display: none
-        &:hover
-          +fluidHoverField($secondary-color,0.2)
-  #login-btn
-      background-color: #fff
-      border: none
-      @if $uppercase-requirement == true
-        text-transform: uppercase
-      font-weight: 300
-      color: gray
-      display: flex
-      .circle-user
-        width: 50px
-        height: 50px
-        border-radius: 50%
-        +onSmall
-          display: none
-        &:hover
-          +fluidHoverField($secondary-color,0.2)
-      span
-        position: relative
-        top: 12px
-        margin-left: 10px
-  #cart-btn
-    background-color: #fff
-    border: none
-    display: flex
-    @if $uppercase-requirement == true
-      text-transform: uppercase
-    line-height: 48px
-    span
-      color: gray
-      font-weight: 300
-    .cart-img
-      width: 50px
-      margin: 0 10px
-      height: 50px
-      +onSmall
-        display: none
-      &:hover
-        +fluidHoverField($secondary-color,0.2)
-    #cart-total
-      color: #000
-      font-weight: 500
+	display: flex
+	width: 100vw
+	height: 120px
+	justify-content: center
+	align-items: center
+	position: sticky
+	top: 0
+	background-color: #fff
+	transform: translate3d(0, 0, 0)
+	// Weird header jumping fix
+	+z-index(header)
+	+onSmall
+		display: none
+	.brand
+		text-decoration: none
+		margin: 0 50px
+		position: relative
+		bottom: 4px
+	#main-search-container
+		#main-search
+			border: 1px solid lighten($primary-color, 10%)
+			@if $uppercase-requirement
+				text-transform: uppercase
+			font-weight: 300
+			width: 30vw
+			height: 37px
+			padding: 5px
+			&:focus
+				border: 1px solid transparent
+				position: relative
+				bottom: 1px
+				transition-duration: 0.3s
+
+			+onSmall
+				display: none
+			&-btn
+				background-color: $primary-color
+				color: white
+				border: none
+				padding: 11px
+				width: 170px
+				@if $uppercase-requirement
+					text-transform: uppercase
+				font-weight: 300
+				margin-left: -5px
+				height: 49px
+				margin-right: 50px
+				+onSmall
+					display: none
+				&:hover
+					+fluidHoverField($secondary-color, 0.2)
+	#login-btn
+		@if $uppercase-requirement
+			text-transform: uppercase
+		@if $vertical-header-icons
+			flex-direction: column
+		@else
+			flex-direction: row
+		background-color: #fff
+		border: none
+		cursor: pointer
+		font-weight: 300
+		color: $primary-color
+		display: flex
+
+		+flexCenter
+		i
+			font-size: 28px
+		span
+			@if $vertical-header-icons
+				position: relative
+				top: 12px
+			@else
+				margin-left: 10px
+
+			color: black
+
+	#cart-btn
+		background-color: #fff
+		border: none
+		cursor: pointer
+		display: flex
+		@if $uppercase-requirement
+			text-transform: uppercase
+		line-height: 48px
+		span
+			color: gray
+			font-weight: 300
+			font-size: 16px
+		i
+			color: $primary-color
+			font-size: 28px
+			margin: 8px 15px
+		#cart-total
+			color: #000
+			font-weight: 500
+			font-size: 16px
 
 .divider
-    border-left: 1px solid lightgray
-    height: 50px
-    right: 244px
-    top: 30px
-    margin: 0 30px
+	border-left: 1px solid lightgray
+	height: 50px
+	right: 244px
+	top: 30px
+	margin: 0 30px

@@ -12,6 +12,10 @@
 @import "Modules/index"
 @import "UI/index"
 
+@font-face
+	font-family: 'Tahoma'
+	src: url('../assets/TahomaRegular.ttf')
+
 // GLOBAL STYLES GOES HERE
 *
 	@if $anti-alias
@@ -19,6 +23,8 @@
 	@if $custom-outline
 		&:focus
 			outline-color: $primary-color !important
+	@if $custom-font
+		font-family: 'Tahoma', sans-serif
 
 
 .expand-btn
@@ -61,9 +67,27 @@
 		transition-duration: 0.25s
 
 
-.carousel
-	.carousel-item
-		width: 100%
+.text-btn-primary
+	@if $uppercase-requirement
+		text-transform: uppercase
+
+	color: darken($primary-color,20%)
+	letter-spacing: 1px
+	border: none
+	background-color: transparent
+	cursor: pointer
+	font-weight: 300
+	margin: 5px 0
+	text-decoration: none
+	border-bottom: 1px solid transparent
+	&:hover
+		transition-duration: .25s
+		color: $primary-color
+	&:active
+		background-color: transparent
+		color: $primary-color
+		border-bottom: 1px solid $primary-color
+
 
 
 
