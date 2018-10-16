@@ -6,6 +6,7 @@
 @import "~slick-carousel/slick/slick"
 @import "~slick-carousel/slick/slick-theme"
 @import "~font-awesome/scss/font-awesome"
+@import "~lightbox2/dist/css/lightbox.min"
 
 
 @import "Mixins/index"
@@ -26,7 +27,6 @@
 	@if $custom-font
 		font-family: 'Tahoma', sans-serif
 
-
 .expand-btn
 	color: $primary-color
 	text-transform: lowercase
@@ -38,7 +38,7 @@
 	margin: 20px auto
 
 .section-block-title
-	width: 100vw
+	width: 100%
 	margin: 40px 0
 	background-color: $primary-color
 	text-align: center
@@ -79,14 +79,12 @@
 	font-weight: 300
 	margin: 5px 0
 	text-decoration: none
-	border-bottom: 1px solid transparent
 	&:hover
 		transition-duration: .25s
 		color: $primary-color
 	&:active
 		background-color: transparent
 		color: $primary-color
-		border-bottom: 1px solid $primary-color
 
 
 

@@ -1,10 +1,29 @@
+@import "common"
 .gallery
-  width: 100vw
-  color: white
-  display: flex
-  font-size: 24px
-  justify-content: center
-  align-items: center
+	margin: 0 auto
+	width: 100%
+	height: auto
+	background-size: cover
+	//img
+	//	max-width: 1600px
 
-//.gallery
-//  width: 100%
+=slickArrow($content,$placement)
+	content: '#{$content}'
+	color: #fff
+	position: absolute
+	text-shadow: 0 0 15px rgba(0, 0, 0, 1)
+	font-weight: 700
+	font-size: 24px
+	@if $placement == "right"
+		right: 50px
+	@else
+		left: 50px
+
+.slick-prev,.slick-next
+	+z-index(slick-arrows)
+
+.slick-prev:before
+	+slickArrow('<',"left")
+
+.slick-next:before
+	+slickArrow('>',"right")

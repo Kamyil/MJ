@@ -71,69 +71,100 @@
             <a href="register.html">
                 <button class="text-btn-primary">Zarejestruj się</button>
             </a>
-            <button class="text-btn-primary">Zapomniałeś hasła</button>
+            <button class="text-btn-primary" type="button" id="remind-password-btn">Zapomniałeś hasła</button>
         </div>
         <div class="row">
             <button type="submit" class="waves-effect waves-light btn">Zaloguj się</button>
         </div>
     </form>
 </aside>
+<aside id="remind-password-panel">
+    <button id="back-to-login-btn" class="text-btn-primary"><i class="fas fa-arrow-left"></i> Wróć do logowania</button>
+    <span>Przypomnij hasło</span>
+    <form action="">
+        <div class="input-field col s12">
+            <input id="remind-password-panel--email" type="text" class="validate">
+            <label for="remind-password-panel--email">E-mail</label>
+        </div>
+        <p>Wpisz swój email, a my ci wyślemy na niego link z możliwością zresetowania hasła :)</p>
+        <div class="row">
+            <button type="submit" class="waves-effect waves-light btn">Przypomnij</button>
+        </div>
+    </form>
+
+</aside>
 <aside id="cart-panel">
     <div class="cart-panel-container">
-    <span>Koszyk</span>
-    <div class="cart-panel-products">
-        <a href="product.html" class="cart-panel-product">
-            <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
-            <span class="product-title">WIJAR</span>
-            <span class="product-price">69,99zł</span>
-        </a>
-        <a href="product.html" class="cart-panel-product">
-            <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
-            <span class="product-title">WIJAR</span>
-            <span class="product-price">69,99zł</span>
-        </a>
-        <a href="product.html" class="cart-panel-product">
-            <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
-            <span class="product-title">WIJAR</span>
-            <span class="product-price">69,99zł</span>
-        </a>
-        <a href="product.html" class="cart-panel-product">
-            <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
-            <span class="product-title">WIJAR</span>
-            <span class="product-price">69,99zł</span>
-        </a>
-        <a href="product.html" class="cart-panel-product">
-            <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
-            <span class="product-title">WIJAR</span>
-            <span class="product-price">69,99zł</span>
-        </a>
-        <a href="product.html" class="cart-panel-product">
-            <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
-            <span class="product-title">WIJAR</span>
-            <span class="product-price">69,99zł</span>
-        </a>
-        <a href="product.html" class="cart-panel-product">
-            <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
-            <span class="product-title">WIJAR</span>
-            <span class="product-price">69,99zł</span>
-        </a>
-    </div>
-    <div id="cart-panel-total">
-        <span>Łącznie</span>
-        <span>9999,99zł</span>
-        <button class="waves-effect waves-light btn">Realizuj zamówienie</button>
-    </div>
+        <span>Koszyk</span>
+        <div class="cart-panel-products">
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <div class="title-price-container">
+                    <span class="cart-panel-product-title">WIJAR</span>
+                    <span class="cart-panel-product-price">69,99zł</span>
+                </div>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <div class="title-price-container">
+                    <span class="cart-panel-product-title">WIJAR</span>
+                    <span class="cart-panel-product-price">69,99zł</span>
+                </div>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <div class="title-price-container">
+                    <span class="cart-panel-product-title">WIJAR</span>
+                    <span class="cart-panel-product-price">69,99zł</span>
+                </div>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <div class="title-price-container">
+                    <span class="cart-panel-product-title">WIJAR</span>
+                    <span class="cart-panel-product-price">69,99zł</span>
+                </div>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <div class="title-price-container">
+                    <span class="cart-panel-product-title">WIJAR</span>
+                    <span class="cart-panel-product-price">69,99zł</span>
+                </div>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <div class="title-price-container">
+                    <span class="cart-panel-product-title">WIJAR</span>
+                    <span class="cart-panel-product-price">69,99zł</span>
+                </div>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <div class="title-price-container">
+                    <span class="cart-panel-product-title">WIJAR</span>
+                    <span class="cart-panel-product-price">69,99zł</span>
+                </div>
+            </a>
+        </div>
+        <div id="cart-panel-total">
+            <span>Łącznie</span>
+            <span>9999,99zł</span>
+            <button class="waves-effect waves-light btn">Realizuj zamówienie</button>
+        </div>
     </div>
 </aside>
-<div class="gallery baner-primary">
-    <img src="public/assets/baner.jpg" alt="">
-    <img src="public/assets/baner.jpg" alt="">
-    <img src="public/assets/baner.jpg" alt="">
-    <img src="public/assets/baner.jpg" alt="">
-</div>
+
+
+    <div class="gallery baner-primary">
+        <img src="public/assets/baner.jpg" alt="">
+        <img src="public/assets/baner.jpg" alt="">
+        <img src="public/assets/baner.jpg" alt="">
+        <img src="public/assets/baner.jpg" alt="">
+    </div>
 
 <div class="row">
-    <div class="col l6 m6 worlds-container">
+    <div class="col offset-l1 offset-m1 l5 m5 s12 worlds-container">
         <div class="row">
 
 
@@ -141,7 +172,7 @@
 
     </div>
 
-    <div class="col l6 m6 news-container">
+    <div class="col l6 m6 s12 news-container">
         <h2>Aktualności</h2>
         <div class="news">
             <h3>News 1</h3>
@@ -172,12 +203,13 @@
         </div>
     </div>
 </div>
-<div class="gallery baner-secondary">
-    <img src="public/assets/baner2.jpg" alt="">
-    <img src="public/assets/baner2.jpg" alt="">
-    <img src="public/assets/baner2.jpg" alt="">
-    <img src="public/assets/baner2.jpg" alt="">
-</div>
+
+<!--<div class="gallery baner-secondary">-->
+    <!--<img src="public/assets/baner2.jpg" alt="">-->
+    <!--<img src="public/assets/baner2.jpg" alt="">-->
+    <!--<img src="public/assets/baner2.jpg" alt="">-->
+    <!--<img src="public/assets/baner2.jpg" alt="">-->
+<!--</div>-->
 
 <footer>
     <div class="row">

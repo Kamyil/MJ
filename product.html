@@ -11,9 +11,111 @@
 <body>
 
 <!-- NOTIFICATION -->
+<!--<div class="nav-wrapper">-->
+    <!--<div class="col s12">-->
+        <!--<a href="#!" class="breadcrumb">First</a>-->
+        <!--<a href="#!" class="breadcrumb">Second</a>-->
+        <!--<a href="#!" class="breadcrumb">Third</a>-->
+    <!--</div>-->
+<!--</div>-->
+<aside id="login-panel">
+    <span>Zaloguj się</span>
+    <form action="">
+        <div class="input-field col s12">
+            <input id="login-panel--email" type="text" class="validate">
+            <label for="login-panel--email">E-mail</label>
+        </div>
+        <div class="input-field col s12">
+            <input id="login-panel--password" type="text" class="validate">
+            <label for="login-panel--password">Hasło</label>
+        </div>
+        <div class="row">
+            <a href="register.html">
+                <button class="text-btn-primary">Zarejestruj się</button>
+            </a>
+            <button class="text-btn-primary" type="button" id="remind-password-btn">Zapomniałeś hasła</button>
+        </div>
+        <div class="row">
+            <button type="submit" class="waves-effect waves-light btn">Zaloguj się</button>
+        </div>
+    </form>
+</aside>
+<aside id="remind-password-panel">
+    <button id="back-to-login-btn" class="text-btn-primary"><i class="fas fa-arrow-left"></i> Wróć do logowania</button>
+    <span>Przypomnij hasło</span>
+    <form action="">
+        <div class="input-field col s12">
+            <input id="remind-password-panel--email" type="text" class="validate">
+            <label for="remind-password-panel--email">E-mail</label>
+        </div>
+        <p>Wpisz swój email, a my ci wyślemy na niego link z możliwością zresetowania hasła :)</p>
+        <div class="row">
+            <button type="submit" class="waves-effect waves-light btn">Przypomnij</button>
+        </div>
+    </form>
 
-<div id="miniNoti"></div>
-
+</aside>
+<aside id="cart-panel">
+    <div class="cart-panel-container">
+        <span>Koszyk</span>
+        <div class="cart-panel-products">
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <div class="title-price-container">
+                    <span class="cart-panel-product-title">WIJAR</span>
+                    <span class="cart-panel-product-price">69,99zł</span>
+                </div>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <div class="title-price-container">
+                    <span class="cart-panel-product-title">WIJAR</span>
+                    <span class="cart-panel-product-price">69,99zł</span>
+                </div>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <div class="title-price-container">
+                    <span class="cart-panel-product-title">WIJAR</span>
+                    <span class="cart-panel-product-price">69,99zł</span>
+                </div>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <div class="title-price-container">
+                    <span class="cart-panel-product-title">WIJAR</span>
+                    <span class="cart-panel-product-price">69,99zł</span>
+                </div>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <div class="title-price-container">
+                    <span class="cart-panel-product-title">WIJAR</span>
+                    <span class="cart-panel-product-price">69,99zł</span>
+                </div>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <div class="title-price-container">
+                    <span class="cart-panel-product-title">WIJAR</span>
+                    <span class="cart-panel-product-price">69,99zł</span>
+                </div>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <div class="title-price-container">
+                    <span class="cart-panel-product-title">WIJAR</span>
+                    <span class="cart-panel-product-price">69,99zł</span>
+                </div>
+            </a>
+        </div>
+        <div id="cart-panel-total">
+            <span>Łącznie</span>
+            <span>9999,99zł</span>
+            <button class="waves-effect waves-light btn">Realizuj zamówienie</button>
+        </div>
+    </div>
+</aside>
 <header>
     <a href="" class="brand">
         <img src="public/assets/logo.gif" alt="">
@@ -77,11 +179,26 @@
             <!--<a href="" class="crumb active">WIJAR</a>-->
         <!--</div>-->
         <div class="product-page-image-gallery">
-            <img src="public/assets/samsung-gear-vr-2017.jpg" alt="">
-            <img src="public/assets/samsung-gear-vr-2017.jpg" alt="">
-            <img src="public/assets/samsung-gear-vr-2017.jpg" alt="">
-            <img src="public/assets/samsung-gear-vr-2017.jpg" alt="">
-            <img src="public/assets/samsung-gear-vr-2017.jpg" alt="">
+
+            <!--<a href="public/assets/samsung-gear-vr-2017.jpg" data-lightbox="product-gallery">-->
+                <img src="public/assets/samsung-gear-vr-2017.jpg" alt="" class="materialboxed" width="650" data-caption="Super WIAJAR OOOO TAK">
+            <!--</a>-->
+
+            <!--<a href="public/assets/samsung-gear-vr-2017.jpg" data-lightbox="product-gallery">-->
+                <img src="public/assets/samsung-gear-vr-2017.jpg" alt="" class="materialboxed" width="650" data-caption="Super WIAJAR OOOO TAK">
+            <!--</a>-->
+
+            <!--<a href="public/assets/samsung-gear-vr-2017.jpg" data-lightbox="product-gallery">-->
+                <img src="public/assets/samsung-gear-vr-2017.jpg" alt="" class="materialboxed" width="650" data-caption="Super WIAJAR OOOO TAK">
+            <!--</a>-->
+
+            <!--<a href="public/assets/samsung-gear-vr-2017.jpg" data-lightbox="product-gallery">-->
+                <img src="public/assets/samsung-gear-vr-2017.jpg" alt="" class="materialboxed" width="650" data-caption="Super WIAJAR OOOO TAK">
+            <!--</a>-->
+
+            <!--<a href="public/assets/samsung-gear-vr-2017.jpg" data-lightbox="product-gallery">-->
+                <img src="public/assets/samsung-gear-vr-2017.jpg" alt="" class="materialboxed" width="650" data-caption="Super WIAJAR OOOO TAK">
+            <!--</a>-->
         </div>
         <div id="product-page-sidebar">
             <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
@@ -92,7 +209,7 @@
               <span class="product-page-title">WIJAR</span>
               <span class="product-page-short-desc">To je super</span>
               <span class="product-page-price">69,99zł</span>
-              <button class="add-product-to-cart-btn">Do koszyka</button>
+              <button class="waves-effect waves-light btn" id="add-product-to-cart-btn">Do koszyka</button>
             </div>
 
             <div class="product-page-codes">
@@ -110,22 +227,15 @@
 
 <div class="product-page-info-container">
 
-
-    Tabs HTML Structure
-
     <div class="row">
         <div class="col s12">
             <ul class="tabs">
-                <li class="tab col s3"><a href="#test1" target="_self">Test 1</a></li>
-                <li class="tab col s3"><a class="active" href="#test2" target="_self">Test 2</a></li>
-                <li class="tab col s3 disabled" target="_self"><a href="#test3">Disabled Tab</a></li>
-                <li class="tab col s3"><a href="#test4" target="_self">Test 4</a></li>
+                <li class="tab col s5"><a href="#test1" class="active">Opis</a></li>
+                <li class="tab col s7"><a href="#test2">Pliki do pobrania</a></li>
             </ul>
         </div>
-        <div id="test1" class="col s12">Test 1</div>
-        <div id="test2" class="col s12">Test 2</div>
-        <div id="test3" class="col s12">Test 3</div>
-        <div id="test4" class="col s12">Test 4</div>
+        <div id="test1" class="col s12">Opis</div>
+        <div id="test2" class="col s12">Pliki do pobrania</div>
     </div>
 
 

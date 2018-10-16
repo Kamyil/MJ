@@ -1,12 +1,4 @@
-//.product-page
-//    margin: 50px 0
-//    display: flex
-//    justify-content: space-between
-//    &-img
-//        display: flex
-//        +flexCenter
-//        img
-//            max-width: 1200px
+@import "common"
 
 #product-page-sidebar
     display: flex
@@ -18,6 +10,8 @@
     position: relative
     bottom: 40px
     background-color: #fff
+    +onSmall
+        width: 90vw
     .product-page-codes
         display: flex
         flex-direction: column
@@ -31,7 +25,7 @@
         &-short-desc
             +font(null, 20px, #909090, 300, null)
         &-price
-            +font(null, 46px, $primary-color, 500, null)
+            +font(null, 46px, black, 500, null)
     img
         //box-shadow: 17px 0px 36px 0px rgba(0,0,0,0.18)
         margin-right: auto
@@ -54,10 +48,12 @@
     width: 100vw
     display: inline-block
     margin: 0 auto
-    box-shadow: inset 0px 0px 36px 0px rgba(0,0,0,0.98)
+    a
+        width: 100%
+        display: block
 
 .product-page-info-container
-    width: 100vw
+    width: 100%
     display: flex
     flex-direction: column
     +flexCenter

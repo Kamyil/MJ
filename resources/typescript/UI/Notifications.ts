@@ -17,7 +17,7 @@ const miniNotyfications = {
         return this;
     },
     defaults: {
-        lifespan: 3000,
+        lifespan: 5000,
     },
     root: null,
     removeAllButton: null,
@@ -27,7 +27,7 @@ const miniNotyfications = {
         });
     },
     remove(note) {
-        note.animate({opacity: 0, marginLeft: -50}, 200, "linear").animate({height: 0}, 100, () => {
+        note.animate({opacity: 0, marginLeft: 50}, 200, "linear").animate({height: 0}, 100, () => {
             note.remove();
             miniNotyfications.toggleRemoveAllButton();
         });
@@ -41,7 +41,7 @@ const miniNotyfications = {
         }
         else {
             this.removeAllButton
-                .animate({opacity: 0, marginLeft: -50}, 200)
+                .animate({opacity: 0, marginLeft: 50}, 200)
                 .animate({height: 0}, 100, () => this.removeAllButton.hide());
         }
     },
@@ -52,7 +52,7 @@ const miniNotyfications = {
         }
         config = Object.assign({}, this.defaults, config);
         const notifications = $(
-            `<span class='noti noti-${type} ${extraClass}'>${msg}<i class='fa fa-times noti-close'></i></span>`,
+            `<span class='noti noti-${type} ${extraClass}'><i class="fas fa-shopping-cart" style=""></i>${msg}<i class='fa fa-times noti-close'></i></span>`,
         );
         notifications
             .css({opacity: 0, marginRight: -70})

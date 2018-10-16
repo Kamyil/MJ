@@ -13,7 +13,104 @@
 <!-- NOTIFICATION -->
 
 <div id="miniNoti"></div>
+<aside id="login-panel">
+    <span>Zaloguj się</span>
+    <form action="">
+        <div class="input-field col s12">
+            <input id="login-panel--email" type="text" class="validate">
+            <label for="login-panel--email">E-mail</label>
+        </div>
+        <div class="input-field col s12">
+            <input id="login-panel--password" type="text" class="validate">
+            <label for="login-panel--password">Hasło</label>
+        </div>
+        <div class="row">
+            <a href="register.html">
+                <button class="text-btn-primary">Zarejestruj się</button>
+            </a>
+            <button class="text-btn-primary" type="button" id="remind-password-btn">Zapomniałeś hasła</button>
+        </div>
+        <div class="row">
+            <button type="submit" class="waves-effect waves-light btn">Zaloguj się</button>
+        </div>
+    </form>
+</aside>
+<aside id="remind-password-panel">
+    <button id="back-to-login-btn" class="text-btn-primary"><i class="fas fa-arrow-left"></i> Wróć do logowania</button>
+    <span>Przypomnij hasło</span>
+    <form action="">
+        <div class="input-field col s12">
+            <input id="remind-password-panel--email" type="text" class="validate">
+            <label for="remind-password-panel--email">E-mail</label>
+        </div>
+        <p>Wpisz swój email, a my ci wyślemy na niego link z możliwością zresetowania hasła :)</p>
+        <div class="row">
+            <button type="submit" class="waves-effect waves-light btn">Przypomnij</button>
+        </div>
+    </form>
 
+</aside>
+<aside id="cart-panel">
+    <div class="cart-panel-container">
+        <span>Koszyk</span>
+        <div class="cart-panel-products">
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <div class="title-price-container">
+                    <span class="cart-panel-product-title">WIJAR</span>
+                    <span class="cart-panel-product-price">69,99zł</span>
+                </div>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <div class="title-price-container">
+                    <span class="cart-panel-product-title">WIJAR</span>
+                    <span class="cart-panel-product-price">69,99zł</span>
+                </div>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <div class="title-price-container">
+                    <span class="cart-panel-product-title">WIJAR</span>
+                    <span class="cart-panel-product-price">69,99zł</span>
+                </div>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <div class="title-price-container">
+                    <span class="cart-panel-product-title">WIJAR</span>
+                    <span class="cart-panel-product-price">69,99zł</span>
+                </div>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <div class="title-price-container">
+                    <span class="cart-panel-product-title">WIJAR</span>
+                    <span class="cart-panel-product-price">69,99zł</span>
+                </div>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <div class="title-price-container">
+                    <span class="cart-panel-product-title">WIJAR</span>
+                    <span class="cart-panel-product-price">69,99zł</span>
+                </div>
+            </a>
+            <a href="product.html" class="cart-panel-product">
+                <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
+                <div class="title-price-container">
+                    <span class="cart-panel-product-title">WIJAR</span>
+                    <span class="cart-panel-product-price">69,99zł</span>
+                </div>
+            </a>
+        </div>
+        <div id="cart-panel-total">
+            <span>Łącznie</span>
+            <span>9999,99zł</span>
+            <button class="waves-effect waves-light btn">Realizuj zamówienie</button>
+        </div>
+    </div>
+</aside>
 <header>
     <a href="" class="brand">
         <img src="public/assets/logo.gif" alt="">
@@ -65,127 +162,23 @@
     <a href="#">Kontakt</a>
 </div>
 <div class="row">
-    <div class="filters-container">
-        <div class="filter">
-            <span class="filter-title"> Architektura </span>
-            <div class="checkbox-container">
-                <input type="checkbox" name="">
-                <div class="checkbox-title">Blabla</div>
+    <div class="col l2 md2 offset-l1 offset-m1"></div>
+    <ul class="collapsible">
+        <li>
+            <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+    </ul>
 
-            </div>
-            <div class="checkbox-container">
-                <input type="checkbox" name="">
-                <div class="checkbox-title"> Blabla</div>
-
-            </div>
-            <div class="checkbox-container">
-                <input type="checkbox" name="">
-                <div class="checkbox-title"> Blabla</div>
-
-            </div>
-            <div class="checkbox-container">
-                <input type="checkbox" name="">
-                <div class="checkbox-title"> Blabla</div>
-
-            </div>
-        </div>
-        <div class="filter active">
-            <span class="filter-title">Socket </span>
-            <div class="checkbox-container">
-                <input type="checkbox" name="">
-                <div class="checkbox-title">Blabla</div>
-
-            </div>
-            <div class="checkbox-container">
-
-                    <input type="checkbox" name="">
-                    <div class="checkbox-title">Blabla</div>
-
-                </div>
-                <div class="checkbox-container">
-                    <input type="checkbox" name="">
-                    <div class="checkbox-title">Blabla</div>
-
-                </div>
-                <div class="checkbox-container">
-                    <input type="checkbox" name="">
-                    <div class="checkbox-title">Blabla</div>
-
-                </div>
-            </div>
-            <div class="filter">
-                <span class="filter-title">Rodzaj pamięci </span>
-                <div class="checkbox-container">
-                    <input type="checkbox" name="" id="">
-                    <div class="checkbox-title">Blabla</div>
-
-                </div>
-                <div class="checkbox-container">
-                    <input type="checkbox" name="" id="">
-                    <div class="checkbox-title">Blabla</div>
-
-                </div>
-                <div class="checkbox-container">
-                    <input type="checkbox" name="" id="">
-                    <div class="checkbox-title">Blabla</div>
-
-                </div>
-                <div class="checkbox-container">
-                    <input type="checkbox" name="" id="">
-                    <div class="checkbox-title">Blabla</div>
-
-                </div>
-            </div>
-            <div class="filter">
-                <span class="filter-title">Liczba gniazd dodatkowych </span>
-                <div class="checkbox-container">
-                    <input type="checkbox" name="" id="">
-                    <div class="checkbox-title">Blabla</div>
-
-                </div>
-                <div class="checkbox-container">
-                    <input type="checkbox" name="" id="">
-                    <div class="checkbox-title">Blabla</div>
-
-                </div>
-                <div class="checkbox-container">
-                    <input type="checkbox" name="" id="">
-                    <div class="checkbox-title">Blabla</div>
-
-                </div>
-                <div class="checkbox-container">
-                    <input type="checkbox" name="" id="">
-                    <div class="checkbox-title">Blabla</div>
-
-                </div>
-            </div>
-            <div class="filter">
-                <span class="filter-title">Filtr </span>
-                <div class="checkbox-container">
-                    <input type="checkbox" name="" id="">
-                    <div class="checkbox-title"></div>
-
-                </div>
-                <div class="checkbox-container">
-                    <input type="checkbox" name="" id="">
-                    <div class="checkbox-title"></div>
-
-                </div>
-                <div class="checkbox-container">
-                    <input type="checkbox" name="" id="">
-                    <div class="checkbox-title"></div>
-
-                </div>
-                <div class="checkbox-container">
-                    <input type="checkbox" name="" id="">
-                    <div class="checkbox-title"></div>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-        <div class="products">
+        <div class="products l9 m9">
             <a href="product.html" class="product">
                 <img src="https://www.samsung.com/global/galaxy/gear-vr/images/buy-now_banner_new_gear-vr.png" alt="">
                 <span class="product-title">WIJAR</span>
@@ -258,6 +251,7 @@
                 <button class="add-product-to-cart-btn">Do koszyka</button>
             </a>
         </div>
+</div>
 </div>
 
 

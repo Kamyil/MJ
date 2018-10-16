@@ -1,118 +1,152 @@
 @import "../variables"
 @import "../config"
-#bigNotyfications
-  .notyfication-big
-    width: 100vw
-    min-height: 50px
-    padding: 0 50px
-    box-sizing: border-box
-    display: flex
-    justify-content: center
-    align-items: center
-    position: relative
-    .close
-      position: absolute
-      top: 0
-      left: 0
-      cursor: pointer
-    &.error
-      background-color: red
-      color: white
-      .close
-        background-color: darken(red, 5%)
-    &.info
-      background-color: $danger
-      color: white
-      .close
-        background-color: darken($danger, 5%)
-    &.success
-      background-color: $success
-      .close
-        background-color: darken($success, 5%)
-    &.warning
-      background-color: $warning
-      .close
-        background-color: darken($warning, 5%)
 
-#miniNotiRemoveAll
-  border: 1px solid $primary-color
-  background-color: $primary-color
-  color: white
-  //position: absolute
-  text-align: center
-  //border-radius: 5px
-  height: 30px
-  line-height: 25px
-  vertical-align: middle
-  margin-bottom: 5px
-#miniNoti
-  pointer-events: none
-  text-align: center
-  font-weight: 500
-  @if $uppercase-requirement
-    text-transform: uppercase
-  @media (max-width: 768px)
-    width: 100%
-    min-width: 0
-    left: 0
-    top: 60px
-    padding: 10px
 
-  z-index: 9999
-  position: fixed
-  bottom: 10px
-  right: 10px
-  min-width: 320px
-  max-width: 480px
-  display: flex
-  flex-direction: column
-  justify-content: flex-end
-  .noti
-    padding: 0 30px 0 10px
-    display: inline-block
-    height: auto
-    white-space: pre-wrap
-    min-height: 30px
-    line-height: 30px
-    vertical-align: middle
-    margin: 0 0 5px 0
-    background-color: dimgray
-    &-error
-      background-color: $danger
-      &-close
-        background-color: darken($danger, 5%)
-    &-info
+@if $material-notifications
+  #toast-container
+    top: auto !important
+    right: auto !important
+    bottom: 1%
+    left: 1%
+
+  .noti-info
+    @if $uppercase-requirement
+      text-transform: uppercase
+    background-color: #fff
+    color: $primary-color
+    letter-spacing: 1px
+    font-weight: 300
+    transform: translate3d(0,0,0) // Weird jumping fix
+    text-align: center
+    .fa-shopping-cart
       background-color: $primary-color
       color: white
-      .deposit-alert
-        background-color: #202020 !important
-      .fa
-        color: white
-      &-close
-        background-color: darken($primary-color, 5%)
-    &-success
-      background-color: $success
-      &-close
-        background-color: darken($success, 5%)
-    &-warning
-      background-color: $warning
-      &-close
-        background-color: darken($warning, 5%)
-    color: white
-    box-shadow: 1px 1px 2px 1px rgba(0,0,0,.2)
-    position: relative
-    &-close
-      pointer-events: all
-      display: inline-block
-      border-radius: 15px
-      line-height: 28px
-      text-align: center
-      vertical-align: middle
-      font-size: 26px
-      cursor: pointer
-      color: white
+      padding: 8px
+      position: relative
+      left: 0
       top: 0
-      right: 0
-      width: 30px
-      height: 30px
-      position: absolute
+      margin-right: 15px
+
+
+@else
+  #bigNotyfications
+    .notyfication-big
+      width: 100vw
+      min-height: 50px
+      padding: 0 50px
+      box-sizing: border-box
+      display: flex
+      justify-content: center
+      align-items: center
+      position: relative
+      .close
+        position: absolute
+        top: 0
+        left: 0
+        cursor: pointer
+      &.error
+        background-color: red
+        color: white
+        .close
+          background-color: darken(red, 5%)
+      &.info
+        background-color: $danger
+        color: white
+        .close
+          background-color: darken($danger, 5%)
+      &.success
+        background-color: $success
+        .close
+          background-color: darken($success, 5%)
+      &.warning
+        background-color: $warning
+        .close
+          background-color: darken($warning, 5%)
+
+  #miniNotiRemoveAll
+    border: 1px solid $primary-color
+    background-color: whitesmoke
+    color: $primary-color
+    //position: absolute
+    text-align: center
+    //border-radius: 5px
+    height: 30px
+    line-height: 25px
+    vertical-align: middle
+    margin-bottom: 5px
+  #miniNoti
+    pointer-events: none
+    text-align: center
+    font-weight: 500
+    @if $uppercase-requirement
+      text-transform: uppercase
+    @media (max-width: 768px)
+      width: 100%
+      min-width: 0
+      left: 0
+      top: 60px
+      padding: 10px
+
+    z-index: 9999
+    position: fixed
+    bottom: 10px
+    transform: translate3d(0,0,0) // Weird jumping fix
+    right: 10px
+    min-width: 320px
+    max-width: 480px
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    .noti
+      padding: 0 30px 0 10px
+      display: inline-block
+      height: auto
+      white-space: pre-wrap
+      min-height: 30px
+      line-height: 30px
+      vertical-align: middle
+      margin: 0 0 5px 0
+      background-color: dimgray
+      text-align: center
+      &-error
+        background-color: $danger
+        &-close
+          background-color: darken($danger, 5%)
+      &-info
+        background-color: #f2f2f2
+        color: $primary-color
+        .deposit-alert
+          background-color: #202020 !important
+        .fa
+          color: $primary-color
+          font-size: 18px
+
+        &-close
+          background-color: darken($primary-color, 5%)
+      &-success
+        background-color: $success
+        &-close
+          background-color: darken($success, 5%)
+      &-warning
+        background-color: $warning
+        &-close
+          background-color: darken($warning, 5%)
+      color: white
+      box-shadow: 0 0 20px 0 rgba(0,0,0,0.24)
+      position: relative
+      &-close
+        pointer-events: all
+        display: inline-block
+        border-radius: 15px
+        line-height: 28px
+        text-align: center
+        vertical-align: middle
+        font-size: 26px
+        cursor: pointer
+        color: white
+        top: 0
+        right: 0
+        width: 30px
+        height: 30px
+        position: absolute
+
