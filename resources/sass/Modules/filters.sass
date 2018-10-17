@@ -1,34 +1,24 @@
+@import "common"
 .filters-container
-	position: fixed
+	position: sticky
+	top: 200px
 	left: 10px
 	text-align: center
-	@if $uppercase-requirement
-		text-transform: uppercase
-	+box(200px,500px)
-	margin: 50px 10px
-	.filter
-		margin: 10px 0
-		text-align: center
-		cursor: pointer
+
+	.collapsible
+		.collapsible-header
+			@if $uppercase-requirement
+				text-transform: uppercase
+			+flexCenter
+
+	.filters
 		display: flex
 		flex-direction: column
-
-		&-title
-			+font(null, 20px, black, 500, null)
-			&::after
-				content: '>'
-				margin-left: 20px
-				font-weight: 300
-				float: right
-			&.active
-				display: flex
-				flex-direction: row
-				+flexCenter
-			&.active > .checkbox-container
-				display: flex
-		.checkbox-container
-			display: none
-		.checkbox-title
-			+font(null, 15px, #909090, 300, null)
-		input[type="checkbox"]
-			margin-right: 20px
+	i
+		transform: rotate(90deg)
+		transition-duration: 0.3s
+		position: absolute
+		right: 10px
+	li.active  i
+		transform: rotate(180deg)
+		transition-duration: 0.3s

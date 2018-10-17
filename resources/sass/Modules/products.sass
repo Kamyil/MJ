@@ -20,34 +20,13 @@
             color: #505050
 
 // PRODUCTS PAGE STYLES GOES HERE
-
-.products
-    display: flex
-    +flexCenter
-    flex-flow: row wrap
-    .product
-        display: flex
-        text-decoration: none
-        flex-direction: column
-        margin: 10px
-        border: 1px solid transparent
-        +flexCenter
-        &:hover
-            border: 1px solid rgba(60,60,60,0.2)
-            cursor: pointer
-            transition-duration: 0.35s
-        img
-            max-width: 300px
-        &-title
-            @if $uppercase-requirement
-                text-transform: uppercase
-            color: #000
-            font-size: 18px
-            font-weight: 700
-        &-short-desc
-            color: #505050
+.card
+    .card-image
+        i
             font-size: 16px
-        &-price
-            color: $primary-color
-            font-weight: 700
-            font-size: 18px
+    .card-price
+        color: $primary-color
+        position: relative
+        top: 10px
+        text-align: center
+        font-size: 24px !important

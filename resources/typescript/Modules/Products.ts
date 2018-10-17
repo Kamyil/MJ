@@ -3,7 +3,7 @@ import * as $ from "jquery";
 
 const Products = (() => {
 	const Selector = {
-		ADD_PRODUCT_BTN: "#add-product-to-cart-btn",
+		ADD_PRODUCT_BTN: ".add-product-to-cart-btn",
 	};
 
 	$(Selector.ADD_PRODUCT_BTN).on("click", () => {
